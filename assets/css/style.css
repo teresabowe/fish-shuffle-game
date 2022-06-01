@@ -1,0 +1,45 @@
+/* --------- Global style */
+
+body {
+    background-color: white;
+    font-family: "Raleway", sans-serif;
+    color: #445361;
+}
+
+/* --------- Heading */
+
+.heading {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.5rem; 
+    margin-bottom: 20px;
+}
+
+/* --------- Game layout */
+
+.game-area {
+    background-color: rgb(226, 244, 250);
+    box-sizing: border-box;
+    width: 85%;
+    height: 65vh;
+    max-height: 550px;
+    max-width: 830px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.center-images {
+    text-align: center;
+}
