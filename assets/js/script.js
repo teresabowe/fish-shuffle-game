@@ -7,15 +7,15 @@ var counter = 1;
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    var arr = ['crab','octopus','seahorse','fish'];
-    var i = arr.length, k , temp;      // k is to generate random index and temp is to swap the values
+    var shuffle = ['crab','octopus','seahorse','fish'];
+    var i = shuffle.length, k , temp;      // k is to generate random index and temp is to swap the values
     while(--i > 0){
        k = Math.floor(Math.random() * (i+1));
-       temp = arr[k];
-       arr[k] = arr[i];
-       arr[i] = temp;
+       temp = shuffle[k];
+       shuffle[k] = shuffle[i];
+       shuffle[i] = temp;
     }
-    console.log(arr);
+    console.log(shuffle);
     
     let clickables = document.getElementsByClassName("clickable");
 
