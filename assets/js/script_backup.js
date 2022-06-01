@@ -7,7 +7,6 @@ var counter = 1;
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    
     var shuffle = ['crab','octopus','seahorse','fish'];
     var i = shuffle.length, k , temp;      // k is to generate random index and temp is to swap the values
     while(--i > 0){
@@ -16,18 +15,31 @@ document.addEventListener("DOMContentLoaded", function() {
        shuffle[k] = shuffle[i];
        shuffle[i] = temp;
     }
-
-    document.getElementById('1').onclick = runGame;
-    document.getElementById('2').onclick = runGame;
-    document.getElementById('3').onclick = runGame;
-    document.getElementById('4').onclick = runGame; 
+    console.log(shuffle);
     
-    document.getElementById("submit").onclick = checkAnswer();
+    let clickables = document.getElementsByClassName("clickable");
+
+	for (let clickable of clickables) {
+		clickable.addEventListener("click", function() {
+			if (this.getAttribute("data-type") === "submit") {
+				checkAnswer(arr);
+             } else if (this.getAttribute("data-type") === "image-select") {
+				
+                document.getElementById('1').onclick = runGame;
+                document.getElementById('2').onclick = runGame;
+                document.getElementById('3').onclick = runGame;
+                document.getElementById('4').onclick = runGame;       
+             }
+        });
+    }
 
 });
 
+
+
 /** create array for trys and populate */
 function runGame () {
+ console.log("I am in onclick" + counter);
     
         {
         if(counter == 0){
@@ -52,9 +64,9 @@ function runGame () {
     };
 };
 
-function checkAnswer(shuffle) {
-    console.log("hello! from checkanswer");
+function checkAnswer(expectedAnswer) {
+    
     /**document.write(arr);*/
     console.log(seaAnimals);
-    console.log(shuffle);
+    console.log(expectedAnswer);
 };
