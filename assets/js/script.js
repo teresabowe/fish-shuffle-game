@@ -17,13 +17,26 @@ document.addEventListener("DOMContentLoaded", function() {
        shuffle[i] = temp;
     }
 
-    document.getElementById('1').onclick = runGame;
-    document.getElementById('2').onclick = runGame;
-    document.getElementById('3').onclick = runGame;
-    document.getElementById('4').onclick = runGame; 
-    
-    document.getElementById("submit").onclick = checkAnswer();
+     
+    let clickables = document.getElementsByClassName("clickable");
 
+	for (let clickable of clickables) {
+		clickable.addEventListener("click", function() {
+			if (this.getAttribute("data-type") === "submit") {
+				checkAnswer(shuffle);
+             } else if (this.getAttribute("data-type") === "click-image", this.getAttribute("id") === "1") {
+                console.log(`got this far ${this.id}`);
+                }
+
+               /**
+                document.getElementById('2').onclick = runGame;
+                document.getElementById('3').onclick = runGame;
+                document.getElementById('4').onclick = runGame; */      
+    
+                
+            
+        });
+    };
 });
 
 /** create array for trys and populate */

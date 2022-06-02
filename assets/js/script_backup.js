@@ -25,10 +25,14 @@ document.addEventListener("DOMContentLoaded", function() {
 				checkAnswer(arr);
              } else if (this.getAttribute("data-type") === "image-select") {
 				
-                document.getElementById('1').onclick = runGame;
+                if (document.getElementById = ("1")) {
+                    runGame();
+                }
+
+               /**
                 document.getElementById('2').onclick = runGame;
                 document.getElementById('3').onclick = runGame;
-                document.getElementById('4').onclick = runGame;       
+                document.getElementById('4').onclick = runGame; */      
              }
         });
     }
