@@ -17,27 +17,20 @@ document.addEventListener("DOMContentLoaded", function() {
        shuffle[i] = temp;
     }
 
-     
-    let clickables = document.getElementsByClassName("clickable");
-
-	for (let clickable of clickables) {
-		clickable.addEventListener("click", function() {
-			if (this.getAttribute("data-type") === "submit") {
-				checkAnswer(shuffle);
-             } else if (this.getAttribute("data-type") === "click-image", this.getAttribute("id") === "1") {
-                console.log(`got this far ${this.id}`);
-                }
-
-               /**
-                document.getElementById('2').onclick = runGame;
-                document.getElementById('3').onclick = runGame;
-                document.getElementById('4').onclick = runGame; */      
+    document.getElementById('1').onclick = runGame;
+    document.getElementById('2').onclick = runGame;
+    document.getElementById('3').onclick = runGame;
+    document.getElementById('4').onclick = runGame;     
     
-                
-            
-        });
-    };
+    const submitButton = document.getElementById("submit");
+    submitButton.addEventListener("click", function() {
+        checkAnswer(shuffle);
+    });   
+    
 });
+           
+
+
 
 /** create array for trys and populate */
 function runGame () {
@@ -46,18 +39,22 @@ function runGame () {
         if(counter == 0){
             document.getElementById(this.id).src = "assets/images/fish.png";
             counter++;
+            
         }
         else if(counter == 1){
             document.getElementById(this.id).src = "assets/images/octopus.png";
             counter++;
+            
         }
         else if(counter == 2){
             document.getElementById(this.id).src = "assets/images/crab.png";
             counter++;
+            
         }
         else if(counter == 3){
             document.getElementById(this.id).src = "assets/images/seahorse.png";
             counter = 0;
+            
         }
 
     seaAnimals.splice((this.id-1), 1, document.getElementById(this.id).src);
@@ -66,8 +63,33 @@ function runGame () {
 };
 
 function checkAnswer(shuffle) {
-    console.log("hello! from checkanswer");
-    /**document.write(arr);*/
     console.log(seaAnimals);
     console.log(shuffle);
+    arrayForTest = ['crab','octopus','octopus','fish'];
+    console.log(arrayForTest);
+
+    Array.prototype.equals = function (array) {
+        for (var i = 0, l=this.length; i < l; i++) {
+            if (this[i] != array[i]) { 
+                return false;   
+            }           
+        }       
+        return true;
+    };
+    console.log("shuffle versus arrayForTest");
+    console.log(shuffle.equals(arrayForTest));
+    console.log("shuffle versus shuffle");
+    console.log(shuffle.equals(shuffle));
+
+    function getDifference(a, b) {
+        return a.filter(element => {
+          return !b.includes(element);
+        });
+      }
+      
+    console.log(getDifference(shuffle, arrayForTest));
+
+
 };
+
+
