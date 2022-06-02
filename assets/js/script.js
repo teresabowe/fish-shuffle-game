@@ -58,7 +58,9 @@ function runGame () {
         }
 
     seaAnimals.splice((this.id-1), 1, document.getElementById(this.id).src);
+    console.log("seaAnimals after splice")
     console.log(seaAnimals);
+    
     };
 };
 
@@ -76,8 +78,12 @@ function checkAnswer(shuffle) {
 
     //tidy up user guess before checking for more than one selection of sea animal
 
-    seaAnimals = seaAnimals.map(x => x.replace(/teresabowe-fishshuffleg-f4uffbtqz7m.ws-eu46.gitpod.io/g,""));
-    console.log("After edit of user guess seaAnimals");
+    //seaAnimals = seaAnimals.map(x => x.replace(/teresabowe-fishshuffleg-f4uffbtqz7m.ws-eu46.gitpod.io/g,""));
+    seaAnimals = seaAnimals.map(x=>x.substring(81, x.length));
+    console.log("After 1st edit of user guess seaAnimals");
+    console.log(seaAnimals);
+    seaAnimals = seaAnimals.map(x=>x.substring(0, x.length -4));
+    console.log("After 2nd edit of user guess seaAnimals");
     console.log(seaAnimals);
 
     //find out if there is more than one selection of a sea animal
@@ -88,10 +94,13 @@ function checkAnswer(shuffle) {
         });
       }
     console.log("getDifference Function");
-    console.log(getDifference(arrayForTestShuffle, arrayForTestUserGuess));
+    console.log(getDifference(shuffle, seaAnimals));
 
-    console.log("End of this test");
+    console.log("End of get difference check this test");
+    console.log("")
+    console.log("")
 
+      // divider
 
     Array.prototype.equals = function (array) {
         for (var i = 0, l=this.length; i < l; i++) {
