@@ -63,10 +63,35 @@ function runGame () {
 };
 
 function checkAnswer(shuffle) {
+    console.log("Selection from user")
     console.log(seaAnimals);
+    console.log("Selection from shuffle")
     console.log(shuffle);
-    arrayForTest = ['crab','octopus','octopus','fish'];
-    console.log(arrayForTest);
+    console.log("Selection for testing - User Guess")
+    arrayForTestUserGuess = ['crab','octopus','octopus','fish'];
+    console.log(arrayForTestUserGuess);
+    console.log("Selection for testing - Shuffle")
+    arrayForTestShuffle = ['fish','crab','seahorse','octopus'];
+    console.log(arrayForTestShuffle);
+
+    //tidy up user guess before checking for more than one selection of sea animal
+
+    seaAnimals = seaAnimals.map(x => x.replace(/teresabowe-fishshuffleg-f4uffbtqz7m.ws-eu46.gitpod.io/g,""));
+    console.log("After edit of user guess seaAnimals");
+    console.log(seaAnimals);
+
+    //find out if there is more than one selection of a sea animal
+
+    function getDifference(a, b) {
+        return a.filter(element => {
+          return !b.includes(element);
+        });
+      }
+    console.log("getDifference Function");
+    console.log(getDifference(arrayForTestShuffle, arrayForTestUserGuess));
+
+    console.log("End of this test");
+
 
     Array.prototype.equals = function (array) {
         for (var i = 0, l=this.length; i < l; i++) {
@@ -76,18 +101,16 @@ function checkAnswer(shuffle) {
         }       
         return true;
     };
-    console.log("shuffle versus arrayForTest");
-    console.log(shuffle.equals(arrayForTest));
+    console.log("shuffle versus arrayForTestUserGuess");
+    console.log(shuffle.equals(arrayForTestUserGuess));
     console.log("shuffle versus shuffle");
     console.log(shuffle.equals(shuffle));
+    console.log("shuffle versus arrayForTestShuffle")
+    console.log(shuffle.equals(arrayForTestShuffle));
 
-    function getDifference(a, b) {
-        return a.filter(element => {
-          return !b.includes(element);
-        });
-      }
-      
-    console.log(getDifference(shuffle, arrayForTest));
+    console.log("End of this test");
+
+    
 
     function checkArrayEquality(_array1, _array2) 
     {
@@ -123,7 +146,22 @@ function checkAnswer(shuffle) {
             console.log("no match", array1[i], array2[j]);
         }
     }
+/** https://bobbyhadz.com/blog/javascript-check-if-array-contains-substring-match */
 
+    const array = ['hello', 'world'];
+    const substring = 'hell';
+
+    const matches = array.filter(element => {
+    if (element.indexOf(substring) !== -1) {
+        return true;
+    }
+    });
+
+    console.log(matches); // 👉️ [ 'hello' ]
+
+    if (matches.length > 0) {
+    // array contains substring match
+}
 
 
 };
