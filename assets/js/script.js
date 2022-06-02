@@ -89,6 +89,42 @@ function checkAnswer(shuffle) {
       
     console.log(getDifference(shuffle, arrayForTest));
 
+    function checkArrayEquality(_array1, _array2) 
+    {
+        return _array1.length === _array2.length && 
+        _array1.every( function(_array1_i ,i) 
+        { 
+        return _array1_i === _array2[i] 
+        } )  
+    }
+    //usage
+    let array1 = [1,2,"Hello",7] 
+    let array2 = ["Hello",7,2,1] 
+    let array3 = [1,2,"Hello",7] 
+    console.log(checkArrayEquality(array1, array2));
+    console.log(checkArrayEquality(array1, array3));
+    
+    function checkArrayElements(_array1, _array2) 
+    {
+        return _array1[0]===_array2[0]; 
+    }
+    console.log("Check array element 1")
+    console.log(checkArrayElements(array1, array3));
+
+    console.log("try compare using iterate");
+
+    if (array1.length !== array2.length) return console.log("false");
+    for (let i = 0; i < array1.length; i++) {
+        for (let j = 0; j < array2.length; j++) {
+            if (array1[i] === array2[j]) {
+                console.log("yes match", array1[i], array2[j]);
+                continue;
+            }
+            console.log("no match", array1[i], array2[j]);
+        }
+    }
+
+
 
 };
 
