@@ -71,6 +71,11 @@ function checkAnswer(shuffle) {
     console.log("Selection from shuffle")
     console.log(shuffle);
 
+    //clone seaAnimals
+    console.log("Clone seaAnimals");
+    var cloneSeaAnimals = [...seaAnimals];
+    console.log(cloneSeaAnimals);
+
     //tidy up user guess before checking for more than one selection of sea animal
     
     /** 
@@ -87,10 +92,10 @@ function checkAnswer(shuffle) {
     console.log("After edit of user guess seaAnimalsCutTest");
     console.log("seaAnimals")
     */
-    seaAnimals = seaAnimals.map(x=>x.substring(81, x.length));
-    seaAnimals = seaAnimals.map(x=>x.substring(0, x.length -4));
-    console.log("After edit of user guess seaAnimals");
-    console.log(seaAnimals);
+    cloneSeaAnimals = cloneSeaAnimals.map(x=>x.substring(81, x.length));
+    cloneSeaAnimals = cloneSeaAnimals.map(x=>x.substring(0, x.length -4));
+    console.log("After edit of user guess cloneSeaAnimals");
+    console.log(cloneSeaAnimals);
 
 
 
@@ -104,11 +109,19 @@ function checkAnswer(shuffle) {
         });
       }
     console.log("getDifference Function");
-    console.log(getDifference(shuffle, seaAnimals));
+    console.log(getDifference(shuffle, cloneSeaAnimals));
 
     console.log("End of get difference check this test");
     console.log("")
     console.log("")
+
+    if ((getDifference(shuffle, cloneSeaAnimals).length) != 0) {
+        /*console.log("Array is empty");*/
+        alert(`Don't forget to choose one of each sea animal i.e. ${getDifference(shuffle, cloneSeaAnimals)}`);
+        };
+
+
+
 
       // divider
 
