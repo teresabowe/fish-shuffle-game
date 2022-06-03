@@ -65,26 +65,36 @@ function runGame () {
 };
 
 function checkAnswer(shuffle) {
+    
     console.log("Selection from user")
     console.log(seaAnimals);
     console.log("Selection from shuffle")
     console.log(shuffle);
-    console.log("Selection for testing - User Guess")
-    arrayForTestUserGuess = ['crab','octopus','octopus','fish'];
-    console.log(arrayForTestUserGuess);
-    console.log("Selection for testing - Shuffle")
-    arrayForTestShuffle = ['fish','crab','seahorse','octopus'];
-    console.log(arrayForTestShuffle);
 
     //tidy up user guess before checking for more than one selection of sea animal
+    
+    /** 
+    console.log("seaAnimals");
+    for ( var i = 0; i < seaAnimals.length; i++ ) {
+        if ( seaAnimals[i].length <= 20 ) {
+            lastIndex = i;
+        break; // break out of the loop
+        }
+    }   
 
-    //seaAnimals = seaAnimals.map(x => x.replace(/teresabowe-fishshuffleg-f4uffbtqz7m.ws-eu46.gitpod.io/g,""));
+    console.log(seaAnimals.splice(0, lastIndex)); 
+
+    console.log("After edit of user guess seaAnimalsCutTest");
+    console.log("seaAnimals")
+    */
     seaAnimals = seaAnimals.map(x=>x.substring(81, x.length));
-    console.log("After 1st edit of user guess seaAnimals");
-    console.log(seaAnimals);
     seaAnimals = seaAnimals.map(x=>x.substring(0, x.length -4));
-    console.log("After 2nd edit of user guess seaAnimals");
+    console.log("After edit of user guess seaAnimals");
     console.log(seaAnimals);
+
+
+
+    
 
     //find out if there is more than one selection of a sea animal
 
@@ -110,15 +120,13 @@ function checkAnswer(shuffle) {
         }       
         return true;
     };
-    console.log("shuffle versus arrayForTestUserGuess");
-    console.log(shuffle.equals(arrayForTestUserGuess));
-    console.log("shuffle versus shuffle");
-    console.log(shuffle.equals(shuffle));
-    console.log("shuffle versus arrayForTestShuffle")
-    console.log(shuffle.equals(arrayForTestShuffle));
+    console.log("shuffle versus seaAnimnals");
+    console.log(shuffle.equals(seaAnimals));
+    
 
     console.log("End of this test");
-
+    console.log("")
+    console.log("")
     
 
     function checkArrayEquality(_array1, _array2) 
