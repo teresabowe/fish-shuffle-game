@@ -107,7 +107,8 @@ function checkAnswer(shuffle) {
         return a.filter(element => {
           return !b.includes(element);
         });
-      }
+    };
+
     console.log("getDifference Function");
     console.log(getDifference(shuffle, cloneSeaAnimals));
 
@@ -117,8 +118,14 @@ function checkAnswer(shuffle) {
 
     if ((getDifference(shuffle, cloneSeaAnimals).length) != 0) {
         /*console.log("Array is empty");*/
-        alert(`Don't forget to choose one of each sea animal i.e. ${getDifference(shuffle, cloneSeaAnimals)}`);
+        alert(`Don't forget to choose one of each sea animal i.e. ${getDifference(shuffle, cloneSeaAnimals)}`);}
+        else {
+            console.log("hello");
         };
+
+
+
+    
 
 
 
@@ -133,14 +140,18 @@ function checkAnswer(shuffle) {
         }       
         return true;
     };
+
     console.log("shuffle versus seaAnimnals");
-    console.log(shuffle.equals(seaAnimals));
+    console.log(shuffle.equals(cloneSeaAnimals));
     
 
     console.log("End of this test");
     console.log("")
     console.log("")
     
+};
+
+    /** 
 
     function checkArrayEquality(_array1, _array2) 
     {
@@ -176,7 +187,7 @@ function checkAnswer(shuffle) {
             console.log("no match", array1[i], array2[j]);
         }
     }
-/** https://bobbyhadz.com/blog/javascript-check-if-array-contains-substring-match */
+/** https://bobbyhadz.com/blog/javascript-check-if-array-contains-substring-match 
 
     const array = ['hello', 'world'];
     const substring = 'hell';
@@ -196,4 +207,4 @@ function checkAnswer(shuffle) {
 
 };
 
-
+*/ 
