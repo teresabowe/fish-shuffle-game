@@ -69,3 +69,9 @@ img {
    
     text-align: center;
 }
+
+button {
+    font-family: 'Fredoka One', cursive;
+    text-align: center;
+    font-size: 1.5rem; 
+}
