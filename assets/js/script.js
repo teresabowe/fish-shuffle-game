@@ -83,6 +83,16 @@ function checkAnswer(shuffle) {
     console.log("After edit of user guess cloneSeaAnimals");
     console.log(cloneSeaAnimals);
 
+    
+
+    //function to find out if there is more than one selection of a sea animal
+
+    function getDifference(a, b) {
+        return a.filter(element => {
+          return !b.includes(element);
+        });
+    };
+
     //function to check if the arrays are the same
 
     Array.prototype.equals = function (array) {
@@ -93,19 +103,10 @@ function checkAnswer(shuffle) {
         }       
         return true;
     };
-
-    //function to find out if there is more than one selection of a sea animal
-
-    function getDifference(a, b) {
-        return a.filter(element => {
-          return !b.includes(element);
-        });
-    };
-
-        
+         
     if ((getDifference(shuffle, cloneSeaAnimals).length) != 0) {
         /*console.log("Array is empty");*/
-        alert(`Oops!! Choose one sea animal i.e. ${getDifference(shuffle, cloneSeaAnimals)}`);
+        alert(`Oops!! Choose one of each sea animal i.e. ${getDifference(c, cloneSeaAnimals)}`);
         }
         else if
             (shuffle.equals(cloneSeaAnimals)) {
@@ -115,7 +116,9 @@ function checkAnswer(shuffle) {
         else 
             alert(`Hard luck! go to the next "Try" to see if you can guess correctly!`);
 
-
+    function elementsAreEqual(element1,element2) {
+        
+    }    
 
     
 
