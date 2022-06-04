@@ -78,30 +78,23 @@ function checkAnswer(shuffle) {
 
     //tidy up user guess before checking for more than one selection of sea animal
     
-    /** 
-    console.log("seaAnimals");
-    for ( var i = 0; i < seaAnimals.length; i++ ) {
-        if ( seaAnimals[i].length <= 20 ) {
-            lastIndex = i;
-        break; // break out of the loop
-        }
-    }   
-
-    console.log(seaAnimals.splice(0, lastIndex)); 
-
-    console.log("After edit of user guess seaAnimalsCutTest");
-    console.log("seaAnimals")
-    */
     cloneSeaAnimals = cloneSeaAnimals.map(x=>x.substring(81, x.length));
     cloneSeaAnimals = cloneSeaAnimals.map(x=>x.substring(0, x.length -4));
     console.log("After edit of user guess cloneSeaAnimals");
     console.log(cloneSeaAnimals);
 
+    //function to check if the arrays are the same
 
+    Array.prototype.equals = function (array) {
+        for (var i = 0, l=this.length; i < l; i++) {
+            if (this[i] != array[i]) { 
+                return false;   
+            }           
+        }       
+        return true;
+    };
 
-    
-
-    //find out if there is more than one selection of a sea animal
+    //function to find out if there is more than one selection of a sea animal
 
     function getDifference(a, b) {
         return a.filter(element => {
@@ -109,19 +102,17 @@ function checkAnswer(shuffle) {
         });
     };
 
-    console.log("getDifference Function");
-    console.log(getDifference(shuffle, cloneSeaAnimals));
-
-    console.log("End of get difference check this test");
-    console.log("")
-    console.log("")
-
+        
     if ((getDifference(shuffle, cloneSeaAnimals).length) != 0) {
         /*console.log("Array is empty");*/
-        alert(`Don't forget to choose one of each sea animal i.e. ${getDifference(shuffle, cloneSeaAnimals)}`);}
-        else {
-            console.log("hello");
-        };
+        alert(`Oops!! Choose one sea animal i.e. ${getDifference(shuffle, cloneSeaAnimals)}`);
+        }
+        else if
+            (shuffle.equals(cloneSeaAnimals)) {
+                alert(`Well Done!!! You chose all of the correct sea animals`);
+        }
+        else 
+            alert(`Hard luck! go to the next "Try" to see if you can guess correctly!`);
 
 
 
@@ -132,14 +123,7 @@ function checkAnswer(shuffle) {
 
       // divider
 
-    Array.prototype.equals = function (array) {
-        for (var i = 0, l=this.length; i < l; i++) {
-            if (this[i] != array[i]) { 
-                return false;   
-            }           
-        }       
-        return true;
-    };
+    
 
     console.log("shuffle versus seaAnimnals");
     console.log(shuffle.equals(cloneSeaAnimals));
