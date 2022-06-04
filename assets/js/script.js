@@ -106,7 +106,7 @@ function checkAnswer(shuffle) {
          
     if ((getDifference(shuffle, cloneSeaAnimals).length) != 0) {
         /*console.log("Array is empty");*/
-        alert(`Oops!! Choose one of each sea animal i.e. ${getDifference(c, cloneSeaAnimals)}`);
+        alert(`Oops!! Choose one of each sea animal i.e. ${getDifference(shuffle, cloneSeaAnimals)}`);
         }
         else if
             (shuffle.equals(cloneSeaAnimals)) {
@@ -115,10 +115,13 @@ function checkAnswer(shuffle) {
         }
         else 
             alert(`Hard luck! go to the next "Try" to see if you can guess correctly!`);
-
-    function elementsAreEqual(element1,element2) {
-        
-    }    
+    
+    console.log("Check if element one is the same")       
+    if (cloneSeaAnimals[0] === shuffle[0]) {
+        document.getElementById("1").style.border = "thick solid #50C878";
+        } else {
+            console.log("element 1 for each array is NOT the same");
+    };
 
     
 
