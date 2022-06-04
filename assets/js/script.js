@@ -110,23 +110,13 @@ function checkAnswer(shuffle) {
         else if
             (shuffle.equals(cloneSeaAnimals)) {
                 alert(`Well Done!!! You chose all of the correct sea animals`);
+                
         }
         else 
             alert(`Hard luck! go to the next "Try" to see if you can guess correctly!`);
 
 
 
-    
-
-
-
-
-      // divider
-
-    
-
-    console.log("shuffle versus seaAnimnals");
-    console.log(shuffle.equals(cloneSeaAnimals));
     
 
     console.log("End of this test");
