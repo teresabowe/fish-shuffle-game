@@ -56,11 +56,21 @@ function runGame () {
             counter = 0;
             
         }
-
-    seaAnimals.splice((this.id-1), 1, document.getElementById(this.id).src);
-    console.log("seaAnimals after splice")
+    if ((this.id) < 5) {
+    console.log("seaAnimals before splice") ;  
     console.log(seaAnimals);
+    seaAnimals.splice((this.id-1), 1, document.getElementById(this.id).src);
+    console.log("seaAnimals after splice");
+    console.log(seaAnimals);
+    }  else if ((this.id) >= 5) {
+        console.log("seaAnimals before splice")  ; 
+        console.log(seaAnimals);
+        seaAnimals.splice((this.id-5), 1, document.getElementById(this.id).src);
+        console.log("seaAnimals after splice");
+        console.log(seaAnimals);
+    };
     
+
     };
 };
 
@@ -77,7 +87,7 @@ function checkAnswer(shuffle) {
     console.log(cloneSeaAnimals);
 
     //tidy up user guess before checking for more than one selection of sea animal
-    
+    console.log("Clean seaAnimals down to sea animal name only");
     cloneSeaAnimals = cloneSeaAnimals.map(x=>x.substring(81, x.length));
     cloneSeaAnimals = cloneSeaAnimals.map(x=>x.substring(0, x.length -4));
     console.log("After edit of user guess cloneSeaAnimals");
@@ -103,7 +113,9 @@ function checkAnswer(shuffle) {
         }       
         return true;
     };
-         
+    
+    console.log("Initial check to see if there are animals missing and also to see if the choice is correct!");
+
     if ((getDifference(shuffle, cloneSeaAnimals).length) != 0) {
         /*console.log("Array is empty");*/
         alert(`Oops!! Choose one of each sea animal i.e. ${getDifference(shuffle, cloneSeaAnimals)}`);
@@ -115,7 +127,7 @@ function checkAnswer(shuffle) {
         }
         else 
             alert(`Hard luck! go to the next "Try" to see if you can guess correctly!`);
-    
+
     console.log("Check if element 1 is the same")       
     if (shuffle[0] === cloneSeaAnimals[0]) {
         document.getElementById("1").style.border = "thick solid #50C878";
@@ -146,8 +158,16 @@ function checkAnswer(shuffle) {
 
 
     console.log("End of this test");
-    console.log("")
-    console.log("")
+    
+    document.getElementById('5').onclick = runGame;
+    document.getElementById('6').onclick = runGame;
+    document.getElementById('7').onclick = runGame;
+    document.getElementById('8').onclick = runGame;     
+
+    const submitButton = document.getElementById("submit2");
+    submitButton.addEventListener("click", function() {
+        checkAnswer(shuffle);
+    });
     
 };
 
