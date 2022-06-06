@@ -137,51 +137,20 @@ function checkAnswer(shuffle) {
     };
     
     console.log("Initial check to see if there are animals missing and also to see if the choice is correct!");
+     
 
-    if ((getDifference(shuffle, cloneSeaAnimals).length) != 0) {
-        /*console.log("Array is empty");*/
-        alert(`Oops!! Choose one of each sea animal i.e. ${getDifference(shuffle, cloneSeaAnimals)}`);
+
+        if ((getDifference(shuffle, cloneSeaAnimals).length) != 0) {
+            alert(`Oops!! Choose one of each sea animal i.e. ${getDifference(shuffle, cloneSeaAnimals)}`);
         }
         else if
             (shuffle.equals(cloneSeaAnimals)) {
-                alert(`Well Done!!! You chose all of the correct sea animals`);
-                
-        }
-        else 
-            alert(`Hard luck! go to the next "Try" to see if you can guess correctly!`);
+            alert(`Well Done!!! You chose all of the correct sea animals`);
+        
+        }  else 
+        alert(`Hard luck! go to the next "Try" to see if you can guess correctly!`);
 
-    console.log("Check if element 1 is the same")       
-    if (shuffle[0] === cloneSeaAnimals[0]) {
-        document.getElementById("1").style.border = "thick solid #50C878";
-        } else {
-            document.getElementById("1").style.border = "thick solid #FF0000 ";
-    };
-
-    console.log("Check if element 2 is the same")       
-    if (shuffle[1] === cloneSeaAnimals[1]) {
-        document.getElementById("2").style.border = "thick solid #50C878";
-        } else {
-            document.getElementById("2").style.border = "thick solid #FF0000 ";
-    };
-
-    console.log("Check if element 3 is the same")       
-    if (shuffle[2] === cloneSeaAnimals[2]) {
-        document.getElementById("3").style.border = "thick solid #50C878";
-        } else {
-            document.getElementById("3").style.border = "thick solid #FF0000 ";
-    };
-
-    console.log("Check if element 4 is the same")       
-    if (shuffle[3] === cloneSeaAnimals[3]) {
-        document.getElementById("4").style.border = "thick solid #50C878";
-        } else {
-            document.getElementById("4").style.border = "thick solid #FF0000 ";
-    };
-
-
-    console.log("End of this test");
-
-    
+       
 };
 
 
