@@ -1,6 +1,6 @@
 
 // create global default seaAnimals variable for updating in runGame
-const baseImageURL = "assets/images/";
+const baseImageURL = "https://teresabowe.github.io/fish-shuffle-game/assets/images/";
 var seaAnimals = [
     `${baseImageURL}fish.png`,
     `${baseImageURL}octopus.png`,
