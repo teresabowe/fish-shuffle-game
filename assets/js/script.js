@@ -1,12 +1,15 @@
 
 // create global default seaAnimals variable for updating in runGame
-const baseImageURL = "https://teresabowe.github.io/fish-shuffle-game/assets/images/";
+const baseImageURL = "https://8000-teresabowe-fishshuffleg-f4uffbtqz7m.ws-eu46.gitpod.io/assets/images/";
 var seaAnimals = [
     `${baseImageURL}fish.png`,
     `${baseImageURL}octopus.png`,
     `${baseImageURL}crab.png`,
     `${baseImageURL}seahorse.png`
 ];
+
+console.log("Show seaAnimals")
+console.log(seaAnimals);
 
 // start counter to cycle through images in runGame
 var counter = 1;
@@ -82,8 +85,6 @@ console.log("seaAnimals after splice");
 console.log(seaAnimals);
 
 };
-    
-    
 
 function checkAnswer(shuffle) {
     
@@ -101,7 +102,7 @@ function checkAnswer(shuffle) {
 
     //tidy up user guess before checking for more than one selection of sea animal
     console.log("Clean seaAnimals down to sea animal name only");
-    cloneSeaAnimals = cloneSeaAnimals.map(x=>x.substring(61, x.length));
+    cloneSeaAnimals = cloneSeaAnimals.map(x=>x.substring(81, x.length));
     cloneSeaAnimals = cloneSeaAnimals.map(x=>x.substring(0, x.length -4));
     console.log("After edit of user guess cloneSeaAnimals");
     console.log(cloneSeaAnimals);
@@ -114,6 +115,7 @@ function checkAnswer(shuffle) {
             document.getElementById(j + 1).style.border = "thick solid #FF0000 ";
         };
     }
+    console.log(correctPick);
 
     //function to find out if there is more than one selection of a sea animal
     //https://bobbyhadz.com/blog/javascript-get-difference-between-two-arrays
@@ -136,21 +138,15 @@ function checkAnswer(shuffle) {
         return true;
     };
     
-    console.log("Initial check to see if there are animals missing and also to see if the choice is correct!");
-     
-
-
-        if ((getDifference(shuffle, cloneSeaAnimals).length) != 0) {
-            alert(`Oops!! Choose one of each sea animal i.e. ${getDifference(shuffle, cloneSeaAnimals)}`);
+    if ((getDifference(shuffle, cloneSeaAnimals).length) != 0) {
+        alert(`Oops!! Choose one of each sea animal i.e. ${getDifference(shuffle, cloneSeaAnimals)}`);
         }
         else if
             (shuffle.equals(cloneSeaAnimals)) {
             alert(`Well Done!!! You chose all of the correct sea animals`);
-        
+            
         }  else 
-        alert(`Hard luck! go to the next "Try" to see if you can guess correctly!`);
-
-       
+            alert(`Hard luck! go to the next "Try" to see if you can guess correctly!`);
 };
 
 
