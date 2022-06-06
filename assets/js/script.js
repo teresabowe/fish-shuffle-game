@@ -1,4 +1,9 @@
+
+// create global default seaAnimals variable for updating in runGame
 var seaAnimals = ["https://8000-teresabowe-fishshuffleg-f4uffbtqz7m.ws-eu46.gitpod.io/assets/images/fish.png","https://8000-teresabowe-fishshuffleg-f4uffbtqz7m.ws-eu46.gitpod.io/assets/images/octopus.png","https://8000-teresabowe-fishshuffleg-f4uffbtqz7m.ws-eu46.gitpod.io/assets/images/crab.png","https://8000-teresabowe-fishshuffleg-f4uffbtqz7m.ws-eu46.gitpod.io/assets/images/seahorse.png"];
+
+// start counter to cycle through images in runGame
+
 var counter = 1;
 
 
@@ -7,7 +12,10 @@ var counter = 1;
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    
+
+// use Fisher-Yates algorithm to shuffle sea animals
+// https://www.tutorialspoint.com/what-is-fisher-yates-shuffle-in-javascript
+
     var shuffle = ['crab','octopus','seahorse','fish'];
     var i = shuffle.length, k , temp;      // k is to generate random index and temp is to swap the values
     while(--i > 0){
@@ -33,6 +41,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 /** create array for trys and populate */
+// https://stackoverflow.com/questions/25291730/change-images-on-click-cycle-through-3-images
+
 function runGame () {
     
         {
@@ -56,19 +66,12 @@ function runGame () {
             counter = 0;
             
         }
-    if ((this.id) < 5) {
+    
     console.log("seaAnimals before splice") ;  
     console.log(seaAnimals);
     seaAnimals.splice((this.id-1), 1, document.getElementById(this.id).src);
     console.log("seaAnimals after splice");
     console.log(seaAnimals);
-    }  else if ((this.id) >= 5) {
-        console.log("seaAnimals before splice")  ; 
-        console.log(seaAnimals);
-        seaAnimals.splice((this.id-5), 1, document.getElementById(this.id).src);
-        console.log("seaAnimals after splice");
-        console.log(seaAnimals);
-    };
     
 
     };
@@ -96,7 +99,8 @@ function checkAnswer(shuffle) {
     
 
     //function to find out if there is more than one selection of a sea animal
-
+    //https://bobbyhadz.com/blog/javascript-get-difference-between-two-arrays
+    //elements from the first array that are not contained in the second array
     function getDifference(a, b) {
         return a.filter(element => {
           return !b.includes(element);
@@ -104,6 +108,7 @@ function checkAnswer(shuffle) {
     };
 
     //function to check if the arrays are the same
+    //https://stackoverflow.com/questions/7837456/how-to-compare-arrays-in-javascript
 
     Array.prototype.equals = function (array) {
         for (var i = 0, l=this.length; i < l; i++) {
@@ -158,16 +163,7 @@ function checkAnswer(shuffle) {
 
 
     console.log("End of this test");
-    
-    document.getElementById('5').onclick = runGame;
-    document.getElementById('6').onclick = runGame;
-    document.getElementById('7').onclick = runGame;
-    document.getElementById('8').onclick = runGame;     
 
-    const submitButton = document.getElementById("submit2");
-    submitButton.addEventListener("click", function() {
-        checkAnswer(shuffle);
-    });
     
 };
 
