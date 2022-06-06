@@ -1,9 +1,14 @@
 
 // create global default seaAnimals variable for updating in runGame
-var seaAnimals = ["https://8000-teresabowe-fishshuffleg-f4uffbtqz7m.ws-eu46.gitpod.io/assets/images/fish.png","https://8000-teresabowe-fishshuffleg-f4uffbtqz7m.ws-eu46.gitpod.io/assets/images/octopus.png","https://8000-teresabowe-fishshuffleg-f4uffbtqz7m.ws-eu46.gitpod.io/assets/images/crab.png","https://8000-teresabowe-fishshuffleg-f4uffbtqz7m.ws-eu46.gitpod.io/assets/images/seahorse.png"];
+const baseImageURL = "assets/images/";
+var seaAnimals = [
+    `${baseImageURL}fish.png`,
+    `${baseImageURL}octopus.png`,
+    `${baseImageURL}crab.png`,
+    `${baseImageURL}seahorse.png`
+];
 
 // start counter to cycle through images in runGame
-
 var counter = 1;
 
 
@@ -45,37 +50,36 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function runGame () {
     
-        {
-        if(counter == 0){
-            document.getElementById(this.id).src = "assets/images/fish.png";
-            counter++;
-            
-        }
-        else if(counter == 1){
-            document.getElementById(this.id).src = "assets/images/octopus.png";
-            counter++;
-            
-        }
-        else if(counter == 2){
-            document.getElementById(this.id).src = "assets/images/crab.png";
-            counter++;
-            
-        }
-        else if(counter == 3){
-            document.getElementById(this.id).src = "assets/images/seahorse.png";
-            counter = 0;
-            
-        }
-    
-    console.log("seaAnimals before splice") ;  
-    console.log(seaAnimals);
-    seaAnimals.splice((this.id-1), 1, document.getElementById(this.id).src);
-    console.log("seaAnimals after splice");
-    console.log(seaAnimals);
-    
+    if(counter == 0){
+        this.src = seaAnimals[counter];
+        counter++;
+        
+    }
+    else if(counter == 1){
+        this.src = seaAnimals[counter];
+        counter++;
+        
+    }
+    else if(counter == 2){
+        this.src = seaAnimals[counter];
+        counter++;
+        
+    }
+    else if(counter == 3){
+        this.src = seaAnimals[counter];
+        counter = 0;
+        
+    }
 
-    };
+console.log("seaAnimals before splice") ;  
+console.log(seaAnimals);
+seaAnimals.splice((this.id-1), 1, document.getElementById(this.id).src);
+console.log("seaAnimals after splice");
+console.log(seaAnimals);
+
 };
+    
+    
 
 function checkAnswer(shuffle) {
     
