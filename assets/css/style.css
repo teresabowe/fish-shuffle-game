@@ -110,3 +110,9 @@ button {
     grid-row: 4/5;
     background-color: rgb(226, 244, 250);
 }
+
+.cloned-area {
+    grid-column: 3/4;
+    grid-row: 4/5;
+    background-color: rgb(211, 215, 216);
+}

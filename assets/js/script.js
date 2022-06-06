@@ -93,6 +93,9 @@ function checkAnswer(shuffle) {
     console.log("Selection from shuffle")
     console.log(shuffle);
 
+    let bodyElement = document.querySelector(".cloned-area");
+    let textElement = document.querySelector(".game-area");
+    let clonedImages = textElement.cloneNode(true);
     let correctPick = 0;
 
     //clone seaAnimals
@@ -144,7 +147,8 @@ function checkAnswer(shuffle) {
             { alert(`Well Done!!! You chose all of the correct sea animals`);
             
         }  else 
-            alert(`Hard luck! go to the next "Try" to see if you can guess correctly!`);
+            alert(`Hard luck! go to the try again to see if you can guess correctly!`);
+        /** bodyElement.appendChild(clonedImages); */     
 };
 
 
