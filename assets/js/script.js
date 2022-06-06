@@ -115,7 +115,6 @@ function checkAnswer(shuffle) {
             document.getElementById(j + 1).style.border = "thick solid #FF0000 ";
         };
     }
-    console.log(correctPick);
 
     //function to find out if there is more than one selection of a sea animal
     //https://bobbyhadz.com/blog/javascript-get-difference-between-two-arrays
@@ -141,9 +140,8 @@ function checkAnswer(shuffle) {
     if ((getDifference(shuffle, cloneSeaAnimals).length) != 0) {
         alert(`Oops!! Choose one of each sea animal i.e. ${getDifference(shuffle, cloneSeaAnimals)}`);
         }
-        else if
-            (shuffle.equals(cloneSeaAnimals)) {
-            alert(`Well Done!!! You chose all of the correct sea animals`);
+        else if (shuffle.equals(cloneSeaAnimals)) 
+            { alert(`Well Done!!! You chose all of the correct sea animals`);
             
         }  else 
             alert(`Hard luck! go to the next "Try" to see if you can guess correctly!`);
