@@ -92,10 +92,7 @@ function checkAnswer(shuffle) {
     console.log(seaAnimals);
     console.log("Selection from shuffle")
     console.log(shuffle);
-
-    let bodyElement = document.querySelector(".cloned-area");
-    let textElement = document.querySelector(".game-area");
-    let clonedImages = textElement.cloneNode(true);
+    
     let correctPick = 0;
 
     //clone seaAnimals
@@ -119,9 +116,19 @@ function checkAnswer(shuffle) {
         };
     }
 
+    /**let clonedElement = document.querySelector(".cloned-area");
+    let seaAnimalsElement = document.querySelector(".game-area");
+    console.log(seaAnimalsElement);
+    console.log(clonedElement);
+    let clonedImages = seaAnimalsElement.cloneNode(true);
+    clonedElement.appendChild(clonedImages);
+    console.log(seaAnimalsElement);
+    console.log(clonedElement);*/
+
     //function to find out if there is more than one selection of a sea animal
     //https://bobbyhadz.com/blog/javascript-get-difference-between-two-arrays
     //elements from the first array that are not contained in the second array
+    
     function getDifference(a, b) {
         return a.filter(element => {
           return !b.includes(element);
@@ -140,15 +147,20 @@ function checkAnswer(shuffle) {
         return true;
     };
     
+    
+
     if ((getDifference(shuffle, cloneSeaAnimals).length) != 0) {
         alert(`Oops!! Choose one of each sea animal i.e. ${getDifference(shuffle, cloneSeaAnimals)}`);
-        }
-        else if (shuffle.equals(cloneSeaAnimals)) 
-            { alert(`Well Done!!! You chose all of the correct sea animals`);
+    }
+    else if (shuffle.equals(cloneSeaAnimals)) 
+        { alert(`Well Done!!! You chose all of the correct sea animals`);
             
-        }  else 
-            alert(`Hard luck! go to the try again to see if you can guess correctly!`);
-        /** bodyElement.appendChild(clonedImages); */     
+    }  else 
+        alert(`Hard luck! go to the try again to see if you can guess correctly!`);
+    
+            
+    
+    
 };
 
 
