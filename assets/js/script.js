@@ -1,6 +1,6 @@
 
 // create global default seaAnimals variable for updating in runGame
-const baseImageURL = "https://8000-teresabowe-fishshuffleg-7iox20lck1a.ws-eu46.gitpod.io/assets/images/";
+const baseImageURL = "https://teresabowe.github.io/fish-shuffle-game/assets/images/";
 var seaAnimals = [
     `${baseImageURL}fish.png`,
     `${baseImageURL}octopus.png`,
@@ -101,7 +101,7 @@ function checkAnswer(shuffle) {
 
     //tidy up user guess before checking for more than one selection of sea animal
     console.log("Clean seaAnimals down to sea animal name only");
-    cloneSeaAnimals = cloneSeaAnimals.map(x=>x.substring(81, x.length));
+    cloneSeaAnimals = cloneSeaAnimals.map(x=>x.substring(61, x.length));
     cloneSeaAnimals = cloneSeaAnimals.map(x=>x.substring(0, x.length -4));
     console.log("After edit of user guess cloneSeaAnimals");
     console.log(cloneSeaAnimals);
