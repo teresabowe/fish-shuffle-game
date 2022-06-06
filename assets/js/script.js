@@ -1,6 +1,6 @@
 
 // create global default seaAnimals variable for updating in runGame
-const baseImageURL = "https://teresabowe.github.io/fish-shuffle-game/assets/images/";
+const baseImageURL = "https://8000-teresabowe-fishshuffleg-7iox20lck1a.ws-eu46.gitpod.io/assets/images/";
 var seaAnimals = [
     `${baseImageURL}fish.png`,
     `${baseImageURL}octopus.png`,
@@ -51,22 +51,26 @@ document.addEventListener("DOMContentLoaded", function() {
 function runGame () {
     
     if(counter == 0){
-        this.src = seaAnimals[counter];
+        console.log(this.src);
+        this.src = "assets/images/fish.png";
         counter++;
         
     }
     else if(counter == 1){
-        this.src = seaAnimals[counter];
+        console.log(this.src);
+        this.src = "assets/images/octopus.png";
         counter++;
         
     }
     else if(counter == 2){
-        this.src = seaAnimals[counter];
+        console.log(this.src);
+        this.src = "assets/images/crab.png";
         counter++;
         
     }
     else if(counter == 3){
-        this.src = seaAnimals[counter];
+        console.log(this.src);
+        this.src = "assets/images/seahorse.png";
         counter = 0;
         
     }
@@ -88,6 +92,8 @@ function checkAnswer(shuffle) {
     console.log("Selection from shuffle")
     console.log(shuffle);
 
+    let correctPick = 0;
+
     //clone seaAnimals
     console.log("Clone seaAnimals");
     var cloneSeaAnimals = [...seaAnimals];
@@ -100,7 +106,14 @@ function checkAnswer(shuffle) {
     console.log("After edit of user guess cloneSeaAnimals");
     console.log(cloneSeaAnimals);
 
-    
+    for (let j = 0; j < 4; j++) {
+        if (shuffle[j] === cloneSeaAnimals[j]) {
+            document.getElementById(j + 1).style.border = "thick solid #50C878";
+            correctPick++;
+        } else {
+            document.getElementById(j + 1).style.border = "thick solid #FF0000 ";
+        };
+    }
 
     //function to find out if there is more than one selection of a sea animal
     //https://bobbyhadz.com/blog/javascript-get-difference-between-two-arrays
