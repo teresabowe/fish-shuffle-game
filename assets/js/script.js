@@ -149,11 +149,24 @@ function checkAnswer(shuffle) {
         return true;
     };
     
+    function incrementClone() {
+        console.log("hello from inside incrementClone!");
+        imageChoiceID++;
+        console.log(imageChoiceID);
+        let clonedElement = document.querySelector(".cloned-area");
+        let seaAnimalsElement = document.querySelector(".game-area");
+        let clonedImages = seaAnimalsElement.cloneNode(true);
+        clonedImages.id = imageChoiceID;
+        clonedImages.classList = "answerArea";
+        clonedElement.appendChild(clonedImages);
+        console.log("hello from inside incrementClone2!");
+    };
+    
     
 
     if ((getDifference(shuffle, cloneSeaAnimals).length) != 0) {
         alert(`Oops!! Choose one of each sea animal i.e. ${getDifference(shuffle, cloneSeaAnimals)}`)
-        
+          
     }
     else if (shuffle.equals(cloneSeaAnimals)) 
         { alert(`Well Done!!! You chose all of the correct sea animals`);
@@ -162,20 +175,10 @@ function checkAnswer(shuffle) {
         alert(`Hard luck! try again to see if you can guess correctly!`);
         
     };
+incrementClone ();   
   
          
-incrementClone();     
+   
     
 };
 
-function incrementClone() {
-    console.log("hello from inside incrementClone!");
-    imageChoiceID++;
-    console.log(imageChoiceID);
-    let clonedElement = document.querySelector(".cloned-area");
-    let seaAnimalsElement = document.querySelector(".game-area");
-    let clonedImages = seaAnimalsElement.cloneNode(true);
-    clonedImages.id = imageChoiceID;
-    clonedElement.appendChild(clonedImages);
-    console.log("hello from inside incrementClone2!");
-};
