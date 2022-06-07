@@ -53,8 +53,7 @@ document.addEventListener("DOMContentLoaded", function() {
 // https://stackoverflow.com/questions/25291730/change-images-on-click-cycle-through-3-images
 
 function runGame() {
-    console.log("Look at seaAnimals from runGame before image selection")
-    console.log(seaAnimals);
+    
     if(counter == 0){
         this.src = "assets/images/fish.png";
         counter++;
@@ -91,7 +90,6 @@ function checkAnswer(shuffle) {
     console.log(shuffle);
     
     let correctPick = 0;
-    var imageChoiceID = 1000;
 
     //clone seaAnimals
     console.log("Clone seaAnimals");
@@ -141,7 +139,7 @@ function checkAnswer(shuffle) {
     
     if ((getDifference(shuffle, cloneSeaAnimals).length) != 0) {
         alert(`Oops!! Choose one of each sea animal i.e. ${getDifference(shuffle, cloneSeaAnimals)}`)
-        
+        incrementClone ();   
     }
     else if (shuffle.equals(cloneSeaAnimals)) 
         { alert(`Well Done!!! You chose all of the correct sea animals`);
@@ -159,6 +157,10 @@ console.log(seaAnimals);
 
 };
 
+function changeImageId(item) {
+    item.id = item.id + "x" + imageChoiceID
+  }
+
 function incrementClone() {
     imageChoiceID++;
     let clonedElement = document.querySelector(".cloned-area");
@@ -166,5 +168,7 @@ function incrementClone() {
     let clonedImages = seaAnimalsElement.cloneNode(true);
     clonedImages.id = imageChoiceID;
     clonedImages.classList = "answer-area";
+    clonedImages.querySelectorAll('img').forEach(changeImageId);
     clonedElement.appendChild(clonedImages);
 };
+
