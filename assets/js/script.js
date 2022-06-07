@@ -94,6 +94,7 @@ function checkAnswer(shuffle) {
     console.log(shuffle);
     
     let correctPick = 0;
+    var imageChoiceID = 0;
 
     //clone seaAnimals
     console.log("Clone seaAnimals");
@@ -147,16 +148,16 @@ function checkAnswer(shuffle) {
         return true;
     };
     
-    
 
     if ((getDifference(shuffle, cloneSeaAnimals).length) != 0) {
-        alert(`Oops!! Choose one of each sea animal i.e. ${getDifference(shuffle, cloneSeaAnimals)}`);
+        alert(`Oops!! Choose one of each sea animal i.e. ${getDifference(shuffle, cloneSeaAnimals)}`)
+        ;
     }
     else if (shuffle.equals(cloneSeaAnimals)) 
         { alert(`Well Done!!! You chose all of the correct sea animals`);
             
     }  else 
-        alert(`Hard luck! go to the try again to see if you can guess correctly!`);
+        alert(`Hard luck! try again to see if you can guess correctly!`);
     
             
     
