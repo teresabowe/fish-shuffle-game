@@ -45,38 +45,34 @@ document.addEventListener("DOMContentLoaded", function() {
     });   
     
 });
-           
+     
 
 
 
 /** create array for trys and populate */
 // https://stackoverflow.com/questions/25291730/change-images-on-click-cycle-through-3-images
 
-function runGame () {
-    
+function runGame() {
+    console.log("Look at seaAnimals from runGame before image selection")
+    console.log(seaAnimals);
     if(counter == 0){
-        console.log(this.src);
         this.src = "assets/images/fish.png";
         counter++;
         
     }
     else if(counter == 1){
-        console.log(this.src);
         this.src = "assets/images/octopus.png";
         counter++;
         
     }
     else if(counter == 2){
-        console.log(this.src);
         this.src = "assets/images/crab.png";
         counter++;
         
     }
     else if(counter == 3){
-        console.log(this.src);
         this.src = "assets/images/seahorse.png";
         counter = 0;
-        
     }
 
 console.log("seaAnimals before splice") ;  
@@ -140,7 +136,8 @@ function checkAnswer(shuffle) {
         return true;
     };
     
-    
+    console.log("Look at cloneSeaAnimals before incrementClone")
+    console.log(cloneSeaAnimals);      
     
     if ((getDifference(shuffle, cloneSeaAnimals).length) != 0) {
         alert(`Oops!! Choose one of each sea animal i.e. ${getDifference(shuffle, cloneSeaAnimals)}`)
@@ -154,9 +151,12 @@ function checkAnswer(shuffle) {
         incrementClone ();   
     };
   
-         
-   
-    
+      
+console.log("Look at cloneSeaAnimals after incrementClone")
+console.log(cloneSeaAnimals);   
+console.log("Look at seaAnimals after incrementClone")
+console.log(seaAnimals); 
+
 };
 
 function incrementClone() {
