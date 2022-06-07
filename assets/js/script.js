@@ -118,15 +118,6 @@ function checkAnswer(shuffle) {
         };
     }
 
-    /**let clonedElement = document.querySelector(".cloned-area");
-    let seaAnimalsElement = document.querySelector(".game-area");
-    console.log(seaAnimalsElement);
-    console.log(clonedElement);
-    let clonedImages = seaAnimalsElement.cloneNode(true);
-    clonedElement.appendChild(clonedImages);
-    console.log(seaAnimalsElement);
-    console.log(clonedElement);*/
-
     //function to find out if there is more than one selection of a sea animal
     //https://bobbyhadz.com/blog/javascript-get-difference-between-two-arrays
     //elements from the first array that are not contained in the second array
@@ -149,36 +140,31 @@ function checkAnswer(shuffle) {
         return true;
     };
     
-    function incrementClone() {
-        console.log("hello from inside incrementClone!");
-        imageChoiceID++;
-        console.log(imageChoiceID);
-        let clonedElement = document.querySelector(".cloned-area");
-        let seaAnimalsElement = document.querySelector(".game-area");
-        let clonedImages = seaAnimalsElement.cloneNode(true);
-        clonedImages.id = imageChoiceID;
-        clonedImages.classList = "answerArea";
-        clonedElement.appendChild(clonedImages);
-        console.log("hello from inside incrementClone2!");
-    };
     
     
-
     if ((getDifference(shuffle, cloneSeaAnimals).length) != 0) {
         alert(`Oops!! Choose one of each sea animal i.e. ${getDifference(shuffle, cloneSeaAnimals)}`)
-          
+        
     }
     else if (shuffle.equals(cloneSeaAnimals)) 
         { alert(`Well Done!!! You chose all of the correct sea animals`);
             
     }  else {
         alert(`Hard luck! try again to see if you can guess correctly!`);
-        
+        incrementClone ();   
     };
-incrementClone ();   
   
          
    
     
 };
 
+function incrementClone() {
+    imageChoiceID++;
+    let clonedElement = document.querySelector(".cloned-area");
+    let seaAnimalsElement = document.querySelector(".game-area");
+    let clonedImages = seaAnimalsElement.cloneNode(true);
+    clonedImages.id = imageChoiceID;
+    clonedImages.classList = "answer-area";
+    clonedElement.appendChild(clonedImages);
+};
