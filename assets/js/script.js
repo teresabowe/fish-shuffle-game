@@ -1,6 +1,6 @@
 
 // create global default seaAnimals variable for updating in runGame
-const baseImageURL = "assets/images/";
+const baseImageURL = "./assets/images/";
 var seaAnimals = [
     `${baseImageURL}fish.png`,
     `${baseImageURL}octopus.png`,
@@ -53,27 +53,28 @@ document.addEventListener("DOMContentLoaded", function() {
 // https://stackoverflow.com/questions/25291730/change-images-on-click-cycle-through-3-images
 
 function runGame() {
+    console.log("this.id");
+console.log(this.id);    
     
-    if(counter == 0){
-        this.src = "assets/images/fish.png";
-        counter++;
-        
-    }
-    else if(counter == 1){
-        this.src = "assets/images/octopus.png";
-        counter++;
-        
-    }
-    else if(counter == 2){
-        this.src = "assets/images/crab.png";
-        counter++;
-        
-    }
-    else if(counter == 3){
-        this.src = "assets/images/seahorse.png";
-        counter = 0;
-    }
-
+if(counter == 0){
+    this.src = "./assets/images/fish.png";
+    counter++;
+    
+}
+else if(counter == 1){
+    this.src = "./assets/images/octopus.png";
+    counter++;
+    
+}
+else if(counter == 2){
+    this.src = "./assets/images/crab.png";
+    counter++;
+    
+}
+else if(counter == 3){
+    this.src = "./assets/images/seahorse.png";
+    counter = 0;
+}
 console.log("seaAnimals before splice") ;  
 console.log(seaAnimals);
 seaAnimals.splice((this.id-1), 1, document.getElementById(this.id).src);
@@ -98,7 +99,7 @@ function checkAnswer(shuffle) {
 
     //tidy up user guess before checking for more than one selection of sea animal
     console.log("Clean seaAnimals down to sea animal name only");
-    cloneSeaAnimals = cloneSeaAnimals.map(x=>x.substring(61, x.length));
+    cloneSeaAnimals = cloneSeaAnimals.map(x=>x.substring(81, x.length));
     cloneSeaAnimals = cloneSeaAnimals.map(x=>x.substring(0, x.length -4));
     console.log("After edit of user guess cloneSeaAnimals");
     console.log(cloneSeaAnimals);
