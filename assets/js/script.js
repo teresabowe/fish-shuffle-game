@@ -57,34 +57,53 @@ document.addEventListener("DOMContentLoaded", function() {
 // https://stackoverflow.com/questions/25291730/change-images-on-click-cycle-through-3-images
 
 function runGame() {
-    console.log("this.id");
-console.log(this.id);    
+       
     
 if(counter == 0){
+    console.log("this.id");
+    console.log(this.id);
     this.src = "assets/images/fish.png";
     counter++;
     
 }
 else if(counter == 1){
+    console.log("this.id");
+    console.log(this.id);
     this.src = "assets/images/octopus.png";
     counter++;
     
 }
 else if(counter == 2){
+    console.log("this.id");
+    console.log(this.id);
     this.src = "assets/images/crab.png";
     counter++;
     
 }
 else if(counter == 3){
+    console.log("this.id");
+    console.log(this.id);
     this.src = "assets/images/seahorse.png";
     counter = 0;
-}
+};
+
 console.log("seaAnimals before splice") ;  
 console.log(seaAnimals);
 
-seaAnimals.splice((this.id-1), 1, selectSeaAnimals[this.id]);
+console.log("Fixed non changing selectSeaAnimals before splice") ;  
+console.log(selectSeaAnimals);
+
+console.log("counter");
+console.log(counter);
+
+//seaAnimals.splice(counter, 1, selectSeaAnimals[this.id]);
+seaAnimals.splice(this.id-1, 1, selectSeaAnimals[counter]);
 console.log("seaAnimals after splice");
 console.log(seaAnimals);
+
+console.log("Fixed non changing selectSeaAnimals after splice") ;  
+console.log(selectSeaAnimals);
+
 
 };
 
