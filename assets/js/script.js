@@ -80,6 +80,8 @@ console.log(seaAnimals);
 console.log("selectSeaAnimals before clone");  
 var selectSeaAnimals = [...seaAnimals];
 console.log(selectSeaAnimals);
+console.log("seaAnimals before splics");  
+console.log(seaAnimals);
 seaAnimals.splice((this.id-1), 1, selectSeaAnimals[this.id]);
 console.log("seaAnimals after splice");
 console.log(seaAnimals);
