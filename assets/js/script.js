@@ -97,7 +97,7 @@ console.log("counter");
 console.log(counter);
 
 //seaAnimals.splice(counter, 1, selectSeaAnimals[this.id]);
-seaAnimals.splice(this.id-1, 1, selectSeaAnimals[counter]);
+seaAnimals.splice(this.id-1, 1, document.getElementById(this.id).src);
 console.log("seaAnimals after splice");
 console.log(seaAnimals);
 
