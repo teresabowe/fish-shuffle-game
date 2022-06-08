@@ -167,6 +167,7 @@ function checkAnswer(shuffle) {
     if ((getDifference(shuffle, cloneSeaAnimals).length) != 0) {
         alert(`Oops!! Choose one of each sea animal i.e. ${getDifference(shuffle, cloneSeaAnimals)}`)
         incrementClone ();   
+        incrementTrys();
     }
     else if (shuffle.equals(cloneSeaAnimals)) 
         { alert(`Well Done!!! You chose all of the correct sea animals`);
@@ -174,6 +175,7 @@ function checkAnswer(shuffle) {
     }  else {
         alert(`Hard luck! try again to see if you can guess correctly!`);
         incrementClone ();   
+        incrementTrys();
     };
   
       
@@ -181,6 +183,10 @@ console.log("Look at cloneSeaAnimals after incrementClone")
 console.log(cloneSeaAnimals);   
 console.log("Look at seaAnimals after incrementClone")
 console.log(seaAnimals); 
+
+console.log("Get id of first clone")
+const clone = document.querySelector(".cloned-area");
+console.log(clone.firstElementChild.id);
 
 };
 

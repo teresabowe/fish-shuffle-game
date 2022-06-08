@@ -31,9 +31,16 @@ h2 {
 
 h3 {
     text-align: center;
-    font-size: 1.5rem;  
+    font-size: 1.7rem;  
     place-self: center;
     margin-top: 65px;
+}
+
+p {
+    text-align: center;
+    font-size: 1.5rem;  
+    place-self: center;
+    margin-top: 30px;
 }
 
 /* --------- Game layout */
@@ -60,13 +67,6 @@ img {
     border-radius: 10%;
     padding: 10px;
 }
-
-/*
-.test {
-    border: 5px solid  rgb(226, 244, 250);
-    border-radius: 10%;
-    padding: 10px;
-}*/
 
 .center-images {
     text-align: center;
