@@ -11,6 +11,10 @@ var seaAnimals = [
 console.log("Show seaAnimals")
 console.log(seaAnimals);
 
+console.log("selectSeaAnimals before clone");  
+var selectSeaAnimals = [...seaAnimals];
+console.log(selectSeaAnimals);
+
 // start counter to cycle through images in runGame
 var counter = 1;
 var imageChoiceID = 1000;
@@ -77,11 +81,7 @@ else if(counter == 3){
 }
 console.log("seaAnimals before splice") ;  
 console.log(seaAnimals);
-console.log("selectSeaAnimals before clone");  
-var selectSeaAnimals = [...seaAnimals];
-console.log(selectSeaAnimals);
-console.log("seaAnimals before splics");  
-console.log(seaAnimals);
+
 seaAnimals.splice((this.id-1), 1, selectSeaAnimals[this.id]);
 console.log("seaAnimals after splice");
 console.log(seaAnimals);
