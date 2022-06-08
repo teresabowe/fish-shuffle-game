@@ -125,7 +125,7 @@ function checkAnswer(shuffle) {
 
     //tidy up user guess before checking for more than one selection of sea animal
     console.log("Clean seaAnimals down to sea animal name only");
-    cloneSeaAnimals = cloneSeaAnimals.map(x=>x.substring(61, x.length));
+    cloneSeaAnimals = cloneSeaAnimals.map(x=>x.substring(14, x.length));
     cloneSeaAnimals = cloneSeaAnimals.map(x=>x.substring(0, x.length -4));
     console.log("After edit of user guess cloneSeaAnimals");
     console.log(cloneSeaAnimals);
