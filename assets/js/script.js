@@ -1,6 +1,6 @@
 
 // create global default seaAnimals variable for updating in runGame
-const baseImageURL = "./assets/images/";
+const baseImageURL = "assets/images/";
 var seaAnimals = [
     `${baseImageURL}fish.png`,
     `${baseImageURL}octopus.png`,
@@ -57,22 +57,22 @@ function runGame() {
 console.log(this.id);    
     
 if(counter == 0){
-    this.src = "./assets/images/fish.png";
+    this.src = "assets/images/fish.png";
     counter++;
     
 }
 else if(counter == 1){
-    this.src = "./assets/images/octopus.png";
+    this.src = "assets/images/octopus.png";
     counter++;
     
 }
 else if(counter == 2){
-    this.src = "./assets/images/crab.png";
+    this.src = "assets/images/crab.png";
     counter++;
     
 }
 else if(counter == 3){
-    this.src = "./assets/images/seahorse.png";
+    this.src = "assets/images/seahorse.png";
     counter = 0;
 }
 console.log("seaAnimals before splice") ;  
