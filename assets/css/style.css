@@ -2,7 +2,7 @@
 
 body {
     background-color: white;
-    font-family: 'Fredoka One', cursive;
+    font-family: 'Fredoka', sans-serif;
     color: #445361;
 }
 
@@ -80,7 +80,7 @@ img {
 }
 
 button {
-    font-family: 'Fredoka One', cursive;
+    font-family: 'Fredoka', sans-serif;
     margin: auto;
     text-align: center;
     font-size: 1.5rem; 
@@ -165,6 +165,7 @@ button {
         font-size: 1.2rem; 
         width: 90px;
         height: 35px;
+        margin-bottom: 20px;
     } 
 
 
@@ -245,18 +246,46 @@ button {
 
 @media only screen and (max-width:480px) {
     
+    .heading {
+        font-size: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 1.1rem; 
+        margin-bottom: 10px;
+    }
+    
+    h3 {
+        font-size: .8rem;  
+        margin-top: 65px;
+    }
+    
+    p {
+        font-size: 1rem;  
+    }
+    
 
     img {
-        width: 45px;
-        height: 45px;
-        margin-bottom: 10px;
-        margin-top: 10px;
-        border: 5px solid  rgb(226, 244, 250);
-        border-radius: 10%;
-        padding: 10px;
+        width: 75px;
+        height: 75px;
     }
 
-    
+
+    img {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        border: 1px solid  rgb(226, 244, 250);
+        border-radius: 10%;
+        padding: 5px;
+    }
+
+    button {
+        font-size: 1rem; 
+        width: 80px;
+        height: 25px;
+    } 
 
 
 }
