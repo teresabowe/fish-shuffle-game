@@ -17,8 +17,7 @@ console.log(selectSeaAnimals);
 
 // start counter to cycle through images in runGame
 var counter = 1;
-var imageChoiceID = 1000;
-
+var imageChoiceId = 1000;
 
 // Wait for the DOM to finish loading before running the game
 // Get the button elements and add event listeners to them
@@ -57,35 +56,34 @@ document.addEventListener("DOMContentLoaded", function() {
 // https://stackoverflow.com/questions/25291730/change-images-on-click-cycle-through-3-images
 
 function runGame() {
-       
-    
-if(counter == 0){
-    console.log("this.id");
-    console.log(this.id);
-    this.src = "assets/images/fish.png";
-    counter++;
-    
-}
-else if(counter == 1){
-    console.log("this.id");
-    console.log(this.id);
-    this.src = "assets/images/octopus.png";
-    counter++;
-    
-}
-else if(counter == 2){
-    console.log("this.id");
-    console.log(this.id);
-    this.src = "assets/images/crab.png";
-    counter++;
-    
-}
-else if(counter == 3){
-    console.log("this.id");
-    console.log(this.id);
-    this.src = "assets/images/seahorse.png";
-    counter = 0;
-};
+          
+    if(counter == 0){
+        console.log("this.id");
+        console.log(this.id);
+        this.src = "assets/images/fish.png";
+        counter++;
+        
+    }
+    else if(counter == 1){
+        console.log("this.id");
+        console.log(this.id);
+        this.src = "assets/images/octopus.png";
+        counter++;
+        
+    }
+    else if(counter == 2){
+        console.log("this.id");
+        console.log(this.id);
+        this.src = "assets/images/crab.png";
+        counter++;
+        
+    }
+    else if(counter == 3){
+        console.log("this.id");
+        console.log(this.id);
+        this.src = "assets/images/seahorse.png";
+        counter = 0;
+    };
 
 console.log("seaAnimals before splice") ;  
 console.log(seaAnimals);
@@ -167,15 +165,12 @@ function checkAnswer(shuffle) {
     if ((getDifference(shuffle, cloneSeaAnimals).length) != 0) {
         alert(`Oops!! Choose one of each sea animal i.e. ${getDifference(shuffle, cloneSeaAnimals)}`)
         incrementClone ();   
-        incrementTrys();
-    }
-    else if (shuffle.equals(cloneSeaAnimals)) 
-        { alert(`Well Done!!! You chose all of the correct sea animals`);
-            
+        
+    }   else if (shuffle.equals(cloneSeaAnimals)) 
+        { alert(`Well Done!!! You chose all of the correct sea animals`);     
     }  else {
         alert(`Hard luck! try again to see if you can guess correctly!`);
         incrementClone ();   
-        incrementTrys();
     };
   
       
@@ -191,15 +186,15 @@ console.log(clone.firstElementChild.id);
 };
 
 function changeImageId(item) {
-    item.id = item.id + "x" + imageChoiceID
+    item.id = item.id + "x" + imageChoiceId
   }
 
 function incrementClone() {
-    imageChoiceID++;
+    imageChoiceId++;
     let clonedElement = document.querySelector(".cloned-area");
     let seaAnimalsElement = document.querySelector(".game-area");
     let clonedImages = seaAnimalsElement.cloneNode(true);
-    clonedImages.id = imageChoiceID;
+    clonedImages.id = imageChoiceId;
     clonedImages.classList = "answer-area";
     clonedImages.querySelectorAll('img').forEach(changeImageId);
     clonedElement.appendChild(clonedImages);
