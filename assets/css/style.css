@@ -2,7 +2,7 @@
 
 body {
     background-color: white;
-    font-family: 'Fredoka One', sans-serif;
+    font-family: 'Fredoka One', cursive;
     color: #445361;
 }
 
@@ -80,7 +80,7 @@ img {
 }
 
 button {
-    font-family: 'Fredoka One', sans-serif;
+    font-family: 'Fredoka One', cursive;
     margin: auto;
     text-align: center;
     font-size: 1.5rem; 
@@ -134,36 +134,38 @@ button {
 /* For larger to medium size screens size from 1024px wide and down */
 
 @media only screen and (max-width:1024px) {
+    
+    
+    
+    .heading {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.3rem; 
+        margin-bottom: 10px;
+    }
+    
+    h3 {
+        font-size: 1rem;  
+        margin-top: 65px;
+    }
+    
+    p {
+        font-size: 1.2rem;  
+    }
+    
 
     img {
-        width: 55px;
-        height: 55px;
-        margin-bottom: 10px;
-        margin-top: 10px;
-        border: 5px solid  rgb(226, 244, 250);
-        border-radius: 10%;
-        padding: 10px;
+        width: 75px;
+        height: 75px;
     }
 
-    .game-area {
-        grid-column: 1/2;
-        grid-row: 3/4;
-    }
-
-    .submit-area {
-        grid-column: 1/2;
-        grid-row: 4/5;
-    }
-
-    .cloned-area-2 {
-        grid-column: 1/2;
-        grid-row: 5/6;
-    }
-
-    .cloned-area {
-        grid-column: 1/2;
-        grid-row: 6/7;
-    }
+    button {
+        font-size: 1.2rem; 
+        width: 90px;
+        height: 35px;
+    } 
 
 
 
@@ -173,15 +175,40 @@ button {
 
 @media only screen and (max-width:768px) {
 
-    img {
-        width: 55px;
-        height: 55px;
-        margin-bottom: 10px;
-        margin-top: 10px;
-        border: 5px solid  rgb(226, 244, 250);
-        border-radius: 10%;
-        padding: 10px;
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
     }
+    
+    .heading {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.3rem; 
+        margin-bottom: 10px;
+    }
+    
+    h3 {
+        font-size: 1rem;  
+        margin-top: 65px;
+    }
+    
+    p {
+        font-size: 1.2rem;  
+    }
+    
+
+    img {
+        width: 60px;
+        height: 60px;
+    }
+
+    button {
+        font-size: 1.2rem; 
+        width: 90px;
+        height: 35px;
+    } 
 
     .game-area {
         grid-column: 1/2;
@@ -196,13 +223,18 @@ button {
     .cloned-area-2 {
         grid-column: 1/2;
         grid-row: 5/6;
-    }
+    }    
 
     .cloned-area {
         grid-column: 1/2;
         grid-row: 6/7;
     }
+  
 
+    .cloned-area-3 {
+        grid-column: 1/2;
+        grid-row: 7/85;
+    }
 
 
 }
@@ -212,14 +244,11 @@ button {
 /* For smaller size screens size from 480px wide and down */
 
 @media only screen and (max-width:480px) {
-    .container {
-        display: grid;
-        grid-template-columns: 1fr;
-    }
+    
 
     img {
-        width: 55px;
-        height: 55px;
+        width: 45px;
+        height: 45px;
         margin-bottom: 10px;
         margin-top: 10px;
         border: 5px solid  rgb(226, 244, 250);
@@ -227,26 +256,7 @@ button {
         padding: 10px;
     }
 
-    .game-area {
-        grid-column: 1/2;
-        grid-row: 3/4;
-    }
-
-    .submit-area {
-        grid-column: 1/2;
-        grid-row: 4/5;
-    }
-
-    .cloned-area-2 {
-        grid-column: 1/2;
-        grid-row: 5/6;
-    }
-
-    .cloned-area {
-        grid-column: 1/2;
-        grid-row: 6/7;
-    }
-
+    
 
 
 }
