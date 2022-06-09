@@ -164,9 +164,8 @@ function checkAnswer(shuffle) {
     
     if ((getDifference(shuffle, cloneSeaAnimals).length) != 0) {
         alert(`Oops!! Choose one of each sea animal i.e. ${getDifference(shuffle, cloneSeaAnimals)}`)
-        incrementClone ();   
-        
-    }   else if (shuffle.equals(cloneSeaAnimals)) 
+        incrementClone ();           
+    }  else if (shuffle.equals(cloneSeaAnimals)) 
         { alert(`Well Done!!! You chose all of the correct sea animals`);     
     }  else {
         alert(`Hard luck! try again to see if you can guess correctly!`);
@@ -191,6 +190,10 @@ function changeImageId(item) {
 
 function incrementClone() {
     imageChoiceId++;
+    if (imageChoiceId >= 1026) {
+        alert(`You have tried to guess the sequence more than 25 times without any luck!  Start a new game by clicking on the start button.`);
+		throw `Aborting game!`;
+    } else {
     let clonedElement = document.querySelector(".cloned-area");
     let seaAnimalsElement = document.querySelector(".game-area");
     let clonedImages = seaAnimalsElement.cloneNode(true);
@@ -198,5 +201,6 @@ function incrementClone() {
     clonedImages.classList = "answer-area";
     clonedImages.querySelectorAll('img').forEach(changeImageId);
     clonedElement.appendChild(clonedImages);
+    };
 };
 
