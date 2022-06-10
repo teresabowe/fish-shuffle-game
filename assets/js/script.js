@@ -17,6 +17,7 @@ console.log(selectSeaAnimals);
 
 // start counter to cycle through images in runGame
 var counter = 1;
+// identify image choices for cloned trys
 var imageChoiceId = 1000;
 
 // Wait for the DOM to finish loading before running the game
@@ -28,14 +29,29 @@ document.addEventListener("DOMContentLoaded", function() {
 // use Fisher-Yates algorithm to shuffle sea animals
 // https://www.tutorialspoint.com/what-is-fisher-yates-shuffle-in-javascript
 
-    var shuffle = ['crab','octopus','seahorse','fish'];
+    /**var shuffle = ['crab','octopus','seahorse','fish'];
     var i = shuffle.length, k , temp;      // k is to generate random index and temp is to swap the values
     while(--i > 0){
        k = Math.floor(Math.random() * (i+1));
        temp = shuffle[k];
        shuffle[k] = shuffle[i];
        shuffle[i] = temp;
-    }
+    }*/
+
+    arrayForShuffle = ['crab','octopus','seahorse','fish'];
+    let arrayShuffle = function(arr) {
+        let newPos, temp;
+
+        for (let i = arr.length - 1; i > 0; i--) {
+            newPos = Math.floor(Math.random() * (i + 1));
+            temp = arr[i];
+            arr[i] = arr[newPos];
+            arr[newPos] = temp;
+        }
+        return arr;
+    };
+
+    let shuffle = arrayShuffle(arrayForShuffle);
 
     document.getElementById('1').onclick = runGame;
     document.getElementById('2').onclick = runGame;
