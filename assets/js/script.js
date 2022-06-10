@@ -38,15 +38,20 @@ document.addEventListener("DOMContentLoaded", function() {
        shuffle[i] = temp;
     }*/
 
-    arrayForShuffle = ['crab','octopus','seahorse','fish'];
-    let arrayShuffle = function(arr) {
-        let newPos, temp;
+    // Idea is to iterate through the array backwards.  As we encounter each array we exchange 
+    // its position with another element in the array.
+    // The exchange location is determined by a random number.
+    //https://www.youtube.com/watch?v=myL4xmtAVtw
 
-        for (let i = arr.length - 1; i > 0; i--) {
-            newPos = Math.floor(Math.random() * (i + 1));
-            temp = arr[i];
-            arr[i] = arr[newPos];
-            arr[newPos] = temp;
+    arrayForShuffle = ['crab','octopus','seahorse','fish']; //array to be shuffled
+    let arrayShuffle = function(arr) { //pass an array into this function. 
+        let newPos, temp; //newPos position of number in array, temp is used for temp assignment for i to allow for swap
+
+        for (let i = arr.length - 1; i > 0; i--) { //get length of array -1, run the loop until the number is greater than zero, decrement i (going down throughthe array)
+            newPos = Math.floor(Math.random() * (i + 1)); //returns number between 0 and 1 so multiply by i + 1 i.e. the number you are moving.  Then use Math.florr to remove te decimal place.
+            temp = arr[i]; // allows for swap
+            arr[i] = arr[newPos]; //allows for swap
+            arr[newPos] = temp; // allows for swap
         }
         return arr;
     };
