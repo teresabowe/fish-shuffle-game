@@ -187,7 +187,8 @@ function checkAnswer(shuffle) {
         alert(`Oops!! Choose one of each sea animal i.e. ${getDifference(shuffle, cloneSeaAnimals)}`)
         incrementClone ();           
     }  else if (shuffle.equals(cloneSeaAnimals)) 
-        { alert(`Well Done!!! You chose all of the correct sea animals`);     
+        { alert(`Well Done!!! You chose all of the correct sea animals`);  
+        throw `Finishing game!`;
     }  else {
         alert(`Hard luck! try again to see if you can guess correctly!`);
         incrementClone ();   
@@ -200,7 +201,7 @@ console.log("Look at seaAnimals after incrementClone")
 console.log(seaAnimals); 
 
 console.log("Get id of first clone")
-const clone = document.querySelector(".cloned-area");
+const clone = document.querySelector(".cloned-area-center");
 console.log(clone.firstElementChild.id);
 
 };
@@ -215,8 +216,8 @@ function incrementClone() {
         alert(`You have tried to guess the sequence more than 25 times without any luck!  Start a new game by clicking on the start button.`);
 		throw `Aborting game!`;
     } else {
-    let clonedElement = document.querySelector(".cloned-area");
-    let seaAnimalsElement = document.querySelector(".game-area");
+    let clonedElement = document.querySelector(".cloned-area-center");
+    let seaAnimalsElement = document.querySelector(".try-area-center");
     let clonedImages = seaAnimalsElement.cloneNode(true);
     clonedImages.id = imageChoiceId;
     clonedImages.classList = "answer-area";

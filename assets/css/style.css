@@ -38,7 +38,7 @@ h2 {
 }
 
 .start-game button {
-    width: 150px;
+    width: 100x;
     height: 40px;
 }
 
@@ -58,18 +58,17 @@ p {
 
 /* --------- Game layout */
 
-.try-area {
+.try-area-left {
     grid-column: 2/3;
     grid-row: 4/5;
     background-color: rgb(226, 244, 250);
 }
 
-.game-area {
+.try-area-center {
     grid-column: 3/4;
     grid-row: 4/5;
     background-color: rgb(226, 244, 250);
 }
-
 
 img {
     width: 100px;
@@ -105,39 +104,19 @@ button {
     border-color: #bebebe;
 } 
 
-.try-area2 {
-    grid-column: 2/3;
-    grid-row: 4/5;
-    background-color: rgb(226, 244, 250);
-}
-
-.game-area2 {
-    grid-column: 3/4;
-    grid-row: 4/5;
-    background-color: rgb(226, 244, 250);
-    color: orange;
-}
-
-.submit-area2 {
-    display: grid;
-    grid-column: 4/5;
-    grid-row: 5/6;
-    background-color: rgb(226, 244, 250);
-}
-
-.cloned-area {
+.cloned-area-center {
     grid-column: 3/4;
     grid-row: 5/6;
     background-color: rgb(229, 233, 235);
 }
 
-.cloned-area-2 {
+.cloned-area-left {
     grid-column: 2/3;
     grid-row: 5/6;
     background-color: rgb(229, 233, 235);
 }
 
-.cloned-area-3 {
+.cloned-area-right {
     grid-column: 4/5;
     grid-row: 5/6;
     background-color: rgb(229, 233, 235);
@@ -230,7 +209,7 @@ button {
         height: 35px;
     } 
 
-    .game-area {
+    .try-area-center {
         grid-column: 1/2;
         grid-row: 4/5;
     }
@@ -240,18 +219,18 @@ button {
         grid-row: 5/6;
     }
 
-    .cloned-area-2 {
+    .cloned-area-left {
         grid-column: 1/2;
         grid-row: 6/7;
     }    
 
-    .cloned-area {
+    .cloned-area-center {
         grid-column: 1/2;
         grid-row: 7/8;
     }
   
 
-    .cloned-area-3 {
+    .cloned-area-right {
         grid-column: 1/2;
         grid-row: 8/9;
     }
