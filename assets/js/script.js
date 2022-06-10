@@ -189,6 +189,8 @@ function checkAnswer(shuffle) {
     }  else if (shuffle.equals(cloneSeaAnimals)) 
         { alert(`Well Done!!! You chose all of the correct sea animals.  Click "Start" to start a new game.`);  
         document.getElementById("submit").disabled = true;
+        //same as below but below might be better as there are more than these ids
+        //https://stackoverflow.com/questions/15003526/how-to-disable-or-enable-all-onclick-for-images-on-a-page
         /*var eles = document.getElementsByTagName('img');
         for (var i=0; i < eles.length; i++)
             eles[i].onclick = null;*/
