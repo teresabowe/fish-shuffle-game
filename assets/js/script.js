@@ -187,8 +187,15 @@ function checkAnswer(shuffle) {
         alert(`Oops!! Choose one of each sea animal i.e. ${getDifference(shuffle, cloneSeaAnimals)}`)
         incrementClone ();           
     }  else if (shuffle.equals(cloneSeaAnimals)) 
-        { alert(`Well Done!!! You chose all of the correct sea animals`);  
-        throw `Finishing game!`;
+        { alert(`Well Done!!! You chose all of the correct sea animals.  Click "Start" to start a new game.`);  
+        document.getElementById("submit").disabled = true;
+        /*var eles = document.getElementsByTagName('img');
+        for (var i=0; i < eles.length; i++)
+            eles[i].onclick = null;*/
+        document.getElementById('1').onclick = null;
+        document.getElementById('2').onclick = null;
+        document.getElementById('3').onclick = null;
+        document.getElementById('4').onclick = null; 
     }  else {
         alert(`Hard luck! try again to see if you can guess correctly!`);
         incrementClone ();   
