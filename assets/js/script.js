@@ -44,18 +44,6 @@ document.addEventListener("DOMContentLoaded", function() {
     //https://www.youtube.com/watch?v=myL4xmtAVtw
 
     arrayForShuffle = ['crab','octopus','seahorse','fish']; //array to be shuffled
-    let arrayShuffle = function(arr) { //pass an array into this function. 
-        let newPos, temp; //newPos position of number in array, temp is used for temp assignment for i to allow for swap
-
-        for (let i = arr.length - 1; i > 0; i--) { //get length of array -1, run the loop until the number is greater than zero, decrement i (going down throughthe array)
-            newPos = Math.floor(Math.random() * (i + 1)); //returns number between 0 and 1 so multiply by i + 1 i.e. the number you are moving.  Then use Math.florr to remove te decimal place.
-            temp = arr[i]; // allows for swap
-            arr[i] = arr[newPos]; //allows for swap
-            arr[newPos] = temp; // allows for swap
-        }
-        return arr;
-    };
-
     let shuffle = arrayShuffle(arrayForShuffle);
 
     document.getElementById('1').onclick = runGame;
@@ -69,12 +57,23 @@ document.addEventListener("DOMContentLoaded", function() {
     });   
     
 });
-     
 
+function  arrayShuffle(arrayToShuffle) { //pass an array into this function. 
+    let newPos, temp; //newPos position of number in array, temp is used for temp assignment for i to allow for swap
 
+    for (let i = arrayToShuffle.length - 1; i > 0; i--) { //get length of array -1, run the loop until the number is greater than zero, decrement i (going down throughthe array)
+        newPos = Math.floor(Math.random() * (i + 1)); //returns number between 0 and 1 so multiply by i + 1 i.e. the number you are moving.  Then use Math.florr to remove te decimal place.
+        temp = arrayToShuffle[i]; // allows for swap
+        arrayToShuffle[i] = arrayToShuffle[newPos]; //allows for swap
+        arrayToShuffle[newPos] = temp; // allows for swap
+    }
+    return arrayToShuffle;
+}
 
 /** create array for trys and populate */
 // https://stackoverflow.com/questions/25291730/change-images-on-click-cycle-through-3-images
+
+
 
 function runGame() {
           
