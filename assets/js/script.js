@@ -73,7 +73,7 @@ function  arrayShuffle(arrayToShuffle) { //pass an array into this function.
 
 function runGame() {
     console.log("in runGame counter[" + counter + "] this.src [" + this.src + "]")
-        
+       
     if(counter == 0){
         this.src = "assets/images/fish.png";
         counter++;
@@ -89,7 +89,7 @@ function runGame() {
         counter++;
         
     }
-    else if(counter == 3){
+    else {
         this.src = "assets/images/seahorse.png";
         counter = 0;
     };
@@ -190,7 +190,6 @@ console.log(seaAnimals);
 console.log("Get id of first clone")
 const clone = document.querySelector(".cloned-area-center");
 console.log(clone.firstElementChild.id);
-
 };
 
 function changeImageId(item) {
