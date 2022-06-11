@@ -224,13 +224,10 @@ The live link is available on: https://teresabowe.github.io/make-a-shopper-bag/i
 
 ### Content
 
-- JavaScript Problem: Shuffling an Array from [All Things JavaScript](https://www.youtube.com/watch?v=myL4xmtAVtw).
+- Understanding and adapting code for Fisher-Yates array shuffle from [All Things JavaScript](https://www.youtube.com/watch?v=myL4xmtAVtw).
 
-- Learning about CSS Grid from [CSS-Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/).
+- Adapting code for image toggle from [Stack Overflow](https://stackoverflow.com/questions/25291730/change-images-on-click-cycle-through-3-images).
 
-- Responsive grid tutorial from [Angela Delise](https://youtu.be/68O6eOGAGqA).
-
-- Creating forms from [Envato Tuts+](https://webdesign.tutsplus.com/tutorials/how-to-build-web-form-layouts-with-css-grid--cms-28776).
 
 ### Media
 
