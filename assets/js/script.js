@@ -11,10 +11,6 @@ var seaAnimals = [
 console.log("Show seaAnimals")
 console.log(seaAnimals);
 
-console.log("selectSeaAnimals before clone");  
-var selectSeaAnimals = [...seaAnimals];
-console.log(selectSeaAnimals);
-
 // start counter to cycle through images in runGame
 var counter = 1;
 // identify image choices for cloned trys
@@ -76,31 +72,24 @@ function  arrayShuffle(arrayToShuffle) { //pass an array into this function.
 
 
 function runGame() {
-          
+    console.log("in runGame counter[" + counter + "] this.src [" + this.src + "]")
+        
     if(counter == 0){
-        console.log("this.id");
-        console.log(this.id);
         this.src = "assets/images/fish.png";
         counter++;
         
     }
     else if(counter == 1){
-        console.log("this.id");
-        console.log(this.id);
         this.src = "assets/images/octopus.png";
         counter++;
         
     }
     else if(counter == 2){
-        console.log("this.id");
-        console.log(this.id);
         this.src = "assets/images/crab.png";
         counter++;
         
     }
     else if(counter == 3){
-        console.log("this.id");
-        console.log(this.id);
         this.src = "assets/images/seahorse.png";
         counter = 0;
     };
@@ -108,21 +97,11 @@ function runGame() {
 console.log("seaAnimals before splice") ;  
 console.log(seaAnimals);
 
-console.log("Fixed non changing selectSeaAnimals before splice") ;  
-console.log(selectSeaAnimals);
-
-console.log("counter");
-console.log(counter);
-
-//seaAnimals.splice(counter, 1, selectSeaAnimals[this.id]);
-//seaAnimals.splice(this.id-1, 1, document.getElementById(this.id).src);
-
 seaAnimals.splice(this.id-1, 1, (document.getElementById(this.id).getAttribute("src")));
+
 console.log("seaAnimals after splice");
 console.log(seaAnimals);
 
-console.log("Fixed non changing selectSeaAnimals after splice") ;  
-console.log(selectSeaAnimals);
 
 
 };
