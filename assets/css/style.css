@@ -49,12 +49,7 @@ h3 {
     margin-top: 65px;
 }
 
-p {
-    text-align: center;
-    font-size: 1.5rem;  
-    place-self: center;
-    margin-top: 30px;
-}
+
 
 /* --------- Game layout */
 
@@ -104,6 +99,13 @@ button {
     border-color: #bebebe;
 } 
 
+p {
+    text-align: center;
+    font-size: 1.5rem;  
+    place-self: center;
+    margin-top: 30px;
+}
+
 .cloned-area-center {
     grid-column: 3/4;
     grid-row: 5/6;
@@ -127,9 +129,7 @@ button {
 /* For larger to medium size screens size from 1024px wide and down */
 
 @media only screen and (max-width:1024px) {
-    
-    
-    
+      
     .heading {
         font-size: 2rem;
     }
@@ -148,7 +148,6 @@ button {
         font-size: 1.2rem;  
     }
     
-
     img {
         width: 75px;
         height: 75px;
@@ -160,8 +159,6 @@ button {
         height: 35px;
         margin-bottom: 20px;
     } 
-
-
 
 }
 
@@ -183,16 +180,10 @@ button {
         margin-bottom: 10px;
     }
     
-    h3 {
-        font-size: 1rem;  
-        margin-top: 65px;
-    }
-    
     p {
         font-size: 1.2rem;  
     }
     
-
     img {
         width: 60px;
         height: 60px;
@@ -229,16 +220,12 @@ button {
         grid-row: 7/8;
     }
   
-
     .cloned-area-right {
         grid-column: 1/2;
         grid-row: 8/9;
     }
 
-
 }
-
-
 
 /* For smaller size screens size from 480px wide and down */
 
@@ -253,21 +240,14 @@ button {
         margin-bottom: 10px;
     }
     
-    h3 {
-        font-size: .8rem;  
-        margin-top: 65px;
-    }
-    
     p {
         font-size: 1rem;  
     }
     
-
     img {
         width: 75px;
         height: 75px;
     }
-
 
     img {
         width: 45px;
@@ -290,6 +270,5 @@ button {
         height: 25px;
         margin-top: 5px;
     } 
-
 
 }
