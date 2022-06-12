@@ -1,6 +1,6 @@
-# Handmade Shopper Bag
+# Sea Animal Shuffle
 
-The Handmade Shopper Bag site intends to provide instructions to crafters on how to make a simple shopper bag.  The site will be targeted towards beginner crafters and those who want specific information on how some techniques are applied.  Detailed instructions will be provided along with a number of images showing the techniques involved.  
+The Sea Animal Shuffle game intends to help users develop their logical thinking skills.  The site is targeted at children from 5+ years of age up to adults.  The user is presented with four sea animal images.  The user needs to find the correct sequence of the images.  The sequence has already been decided by a random computer shuffle of the images.
 
 ![Responsive Mockup](/docs/am-i-responsive.png)
 
