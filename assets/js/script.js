@@ -12,7 +12,7 @@ console.log("Show seaAnimals")
 console.log(seaAnimals);
 
 // start counter to cycle through images in runGame
-var counter = 1;
+//var counter = 1;
 // identify image choices for cloned trys
 var imageChoiceId = 1000;
 
@@ -72,26 +72,16 @@ function  arrayShuffle(arrayToShuffle) { //pass an array into this function.
 
 
 function runGame() {
-    console.log("in runGame counter[" + counter + "] this.src [" + this.src + "]")
+    console.log("in runGame this.src [" + this.src + "]")
        
-    if(counter == 0){
-        this.src = "assets/images/fish.png";
-        counter++;
-        
-    }
-    else if(counter == 1){
-        this.src = "assets/images/octopus.png";
-        counter++;
-        
-    }
-    else if(counter == 2){
-        this.src = "assets/images/crab.png";
-        counter++;
-        
-    }
-    else {
-        this.src = "assets/images/seahorse.png";
-        counter = 0;
+    if(this.src.includes(`${baseImageURL}fish.png`)) {
+        this.src = `${baseImageURL}octopus.png`;
+    } else if(this.src.includes(`${baseImageURL}octopus.png`)) {
+        this.src =`${baseImageURL}crab.png`;
+    } else if(this.src.includes(`${baseImageURL}crab.png`)) {
+        this.src = `${baseImageURL}seahorse.png`;
+    } else if(this.src.includes(`${baseImageURL}seahorse.png`)) {
+        this.src = `${baseImageURL}fish.png`;
     };
 
 console.log("seaAnimals before splice") ;  
