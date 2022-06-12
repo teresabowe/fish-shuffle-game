@@ -1,5 +1,5 @@
 
-// create global default seaAnimals variable for updating in runGame
+// create global default seaAnimals array for updating in toggleImages
 const baseImageURL = "assets/images/";
 var seaAnimals = [
     `${baseImageURL}fish.png`,
@@ -42,10 +42,10 @@ document.addEventListener("DOMContentLoaded", function() {
     arrayForShuffle = ['crab','octopus','seahorse','fish']; //array to be shuffled
     let shuffle = arrayShuffle(arrayForShuffle);
 
-    document.getElementById('1').onclick = runGame;
-    document.getElementById('2').onclick = runGame;
-    document.getElementById('3').onclick = runGame;
-    document.getElementById('4').onclick = runGame;     
+    document.getElementById('1').onclick = toggleImages;
+    document.getElementById('2').onclick = toggleImages;
+    document.getElementById('3').onclick = toggleImages;
+    document.getElementById('4').onclick = toggleImages;     
     
     const submitButton = document.getElementById("submit");
     submitButton.addEventListener("click", function() {
@@ -71,7 +71,7 @@ function  arrayShuffle(arrayToShuffle) { //pass an array into this function.
 
 
 
-function runGame() {
+function toggleImages() {
     console.log("in runGame this.src [" + this.src + "]")
        
     if(this.src.includes(`${baseImageURL}fish.png`)) {
