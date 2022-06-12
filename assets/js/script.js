@@ -115,6 +115,7 @@ function checkAnswer(shuffle) {
     console.log("After edit of user guess cloneSeaAnimals");
     console.log(cloneSeaAnimals);
 
+    // Compares each element of the arrays
     for (let j = 0; j < 4; j++) {
         if (shuffle[j] === cloneSeaAnimals[j]) {
             document.getElementById(j + 1).style.border = "thick solid #50C878";
@@ -123,25 +124,22 @@ function checkAnswer(shuffle) {
         };
     };
 
-    //function to find out if there is more than one selection of a sea animal
-    //https://bobbyhadz.com/blog/javascript-get-difference-between-two-arrays
-    //elements from the first array that are not contained in the second array
-    
+    // Find elements from the first array that are not contained in the second array
+    // https://bobbyhadz.com/blog/javascript-get-difference-between-two-arrays
     function getDifference(a, b) {
         return a.filter(element => {
           return !b.includes(element);
         });
     };
 
-    //function to check if the arrays are the same
-    //https://stackoverflow.com/questions/7837456/how-to-compare-arrays-in-javascript
-
+    // Check if the arrays are the same
+    // https://stackoverflow.com/questions/7837456/how-to-compare-arrays-in-javascript
     Array.prototype.equals = function (array) {
         for (var i = 0, l=this.length; i < l; i++) {
             if (this[i] != array[i]) { 
                 return false;   
-            }           
-        }       
+            };           
+        };      
         return true;
     };
     
@@ -149,23 +147,18 @@ function checkAnswer(shuffle) {
     console.log(cloneSeaAnimals);      
     
     if ((getDifference(shuffle, cloneSeaAnimals).length) != 0) {
-        alert(`Oops!! Choose one of each sea animal i.e. ${getDifference(shuffle, cloneSeaAnimals)}`)
-        incrementClone ();           
+        alert(`Oops!! Choose one of each sea animal i.e. ${getDifference(shuffle, cloneSeaAnimals)}`); 
+        incrementClone();        
     }  else if (shuffle.equals(cloneSeaAnimals)) 
         { alert(`Well Done!!! You chose all of the correct sea animals.  Click "Start" to start a new game.`);  
         document.getElementById("submit").disabled = true;
-        //same as below but below might be better as there are more than these ids
-        //https://stackoverflow.com/questions/15003526/how-to-disable-or-enable-all-onclick-for-images-on-a-page
-        /*var eles = document.getElementsByTagName('img');
-        for (var i=0; i < eles.length; i++)
-            eles[i].onclick = null;*/
         document.getElementById('1').onclick = null;
         document.getElementById('2').onclick = null;
         document.getElementById('3').onclick = null;
         document.getElementById('4').onclick = null; 
     }  else {
         alert(`Hard luck! try again to see if you can guess correctly!`);
-        incrementClone ();   
+        incrementClone();
     };
   
       
@@ -179,15 +172,17 @@ const clone = document.querySelector(".cloned-area-center");
 console.log(clone.firstElementChild.id);
 };
 
+// Add image choice id to user choice to identify and keep the clone unique
 function changeImageId(item) {
     item.id = item.id + "x" + imageChoiceId
-  }
+    };
 
+// Create and increment clones
 function incrementClone() {
     imageChoiceId++;
     if (imageChoiceId >= 1026) {
         alert(`You have tried to guess the sequence more than 25 times without any luck!  Start a new game by clicking on the start button.`);
-		throw `Aborting game!`;
+        throw `Aborting game!`;
     } else {
     let clonedElement = document.querySelector(".cloned-area-center");
     let seaAnimalsElement = document.querySelector(".try-area-center");
@@ -198,4 +193,3 @@ function incrementClone() {
     clonedElement.appendChild(clonedImages);
     };
 };
-
