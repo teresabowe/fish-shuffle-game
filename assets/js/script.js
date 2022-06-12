@@ -102,15 +102,13 @@ function checkAnswer(shuffle) {
     console.log(seaAnimals);
     console.log("Selection from shuffle")
     console.log(shuffle);
-    
-    let correctPick = 0;
 
-    //clone seaAnimals
+    //clone seaAnimals (user choice) to prepare for cleaning and comparisons with shuffle (computer choice)
     console.log("Clone seaAnimals");
     var cloneSeaAnimals = [...seaAnimals];
     console.log(cloneSeaAnimals);
 
-    //tidy up user guess before checking for more than one selection of sea animal
+    //tidy up user choice cloneSeaAnimals
     console.log("Clean seaAnimals down to sea animal name only");
     cloneSeaAnimals = cloneSeaAnimals.map(x=>x.substring(14, x.length));
     cloneSeaAnimals = cloneSeaAnimals.map(x=>x.substring(0, x.length -4));
@@ -120,11 +118,10 @@ function checkAnswer(shuffle) {
     for (let j = 0; j < 4; j++) {
         if (shuffle[j] === cloneSeaAnimals[j]) {
             document.getElementById(j + 1).style.border = "thick solid #50C878";
-            correctPick++;
         } else {
             document.getElementById(j + 1).style.border = "thick solid #FF0000 ";
         };
-    }
+    };
 
     //function to find out if there is more than one selection of a sea animal
     //https://bobbyhadz.com/blog/javascript-get-difference-between-two-arrays
