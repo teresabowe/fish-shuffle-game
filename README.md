@@ -218,7 +218,7 @@ Firefox Version 100 has a slightly grainy appearance for Open Sans in the header
     - Click on the dropdown and select the Main branch.
     - The live link will be shown once the deployment is complete.
 
-The live link is available on: https://teresabowe.github.io/make-a-shopper-bag/index.html
+The live link is available on: https://teresabowe.github.io/sea-animal-shuffle/
 
 ## Credits
 
@@ -226,8 +226,11 @@ The live link is available on: https://teresabowe.github.io/make-a-shopper-bag/i
 
 - Understanding and adapting code for Fisher-Yates array shuffle from [All Things JavaScript](https://www.youtube.com/watch?v=myL4xmtAVtw).
 
-- Adapting code for image toggle from [Stack Overflow](https://stackoverflow.com/questions/25291730/change-images-on-click-cycle-through-3-images).
+- Initially adapted to create image toggle from [Stack Overflow](https://stackoverflow.com/questions/25291730/change-images-on-click-cycle-through-3-images).  This code was later replaced with my own code to remove a bug.
 
+- Code used to find missing elements from two arrays from [Borislav Hadzhiev](https://bobbyhadz.com/blog/javascript-get-difference-between-two-arrays). 
+
+- Code used to compare two arrays from [Stack Overflow](https://stackoverflow.com/questions/7837456/how-to-compare-arrays-in-javascript).
 
 ### Media
 
