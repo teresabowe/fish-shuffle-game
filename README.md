@@ -61,30 +61,40 @@ The Sea Animal Shuffle game intends to help users develop their logical thinking
 
 ## Testing
 
-Initially all device testing was simulated on the Developer Tools on Google Chrome Version 101.0.4951.54.  As each feature of the product was being developed, it was tested on Google Chrome to check that it was functioning correctly and also that the responsiveness was as expected.
+Initially all device testing was simulated on the Developer Tools on Google Chrome Version Version 102.0.5005.63.  As each feature of the product was being developed, it was tested on Google Chrome to check that it was functioning correctly and also that the responsiveness was as expected.
 
 ### Responsiveness 
+Further manual testing for responsiveness was completed using Developer Tools on Google Chrome and pyhsical devices.  The results are shown below.
 
+| Device                    | Responsive >= 700px | Responsive < 699px | Notes:         |
+| :------------             |   :---:             |   :---:            |  :---:         |
+| iPhone SE                 |     n/a             |     Yes            | Virtual device |
+| iPhone XR                 |     n/a             |     Yes            | Virtual device |
+| iPhone 12 Pro             |     n/a             |     Yes            | Virtual device |
+| iPhone 13                 |     n/a             |     Yes            | Physical device|
+| Surface Duo               |     n/a             |     Yes            | Virtual device |
+| Galaxy Fold               |     n/a             |     Yes            | Virtual device |
+| Sansung Galaxy A51/71     |     n/a             |     Yes            | Virtual device |
+| Pixel 5                   |     n/a             |     Yes            | Virtual device |
+| Samsung Galaxy S8+        |     n/a             |     Yes            | Virtual device |
+| Samsung Galaxy S20 Ultra  |     n/a             |     Yes            | Virtual device |
+| iPad Air                  |     Yes             |     n/a            | Virtual device |
+| iPad Mini                 |     Yes             |     n/a            | Virtual device |
+| Surface Pro 7             |     Yes             |     n/a            | Virtual device |
+| Nest Hub                  |     Yes             |     n/a            | Virtual device |
+| Nest Hub Max              |     Yes             |     n/a            | Virtual device |
+| Desktop <= 1024           |     Yes             |     n/a            | Physical device|
+| Desktop > 1024            |     Yes             |     n/a            | Physical device|
 
-| Device                    | Responsive >= 700px |    Responsive < 699px     | 
-| :------------             |   :---:             |   :---:                     |
-| iPhone SE                 |     Yes               |     5                       |
-| iPhone XR                 |     Yes               |     5                       |
-| iPhone 12 Pro             |     5               |     5                       |
-| Pixel 5                   |     5           |     5                       |
-| Samsung Galaxy S8+        |     5           |     5                       |
-| Samsung Galaxy S20 Ultra  |     4           |     5                       |
-| iPad Air                  |     4           |     5                       |
-| iPad Mini                 |     5           |     5                       |
-| Surface Pro 7             |     4           |     5                       |
-| Surface Duo               |     4           |     5                       |
-| Galaxy Fold               |     4           |     5                       |
-| Sansung Galaxy A51/71     |     4           |     5                       |
-| Nest Hub                  |     4           |     5                       |
-| Nest Hub Max              |     4           |     5                       |
+### Browser Compatibility 
+Further manual testing for responsiveness was completed using Developer Tools on Google Chrome and pyhsical devices.  The results are shown below.
 
-
-While the pages are developed for responsiveness using CSS Grid, some of the sections use Flexgrid. One of these is the header section.  An issue that was highlighted during the testing and proved challenging was the centering of both the Logo text and the navigation items once the header was wrapped for responsiveness.  The Chrome [Unicorn Revealer](https://chrome.google.com/webstore/detail/unicorn-revealer/lmlkphhdlngaicolpmaakfmhplagoaln?hl=en-GB) showed that the problem existed on the navigation items where the contact link had a right hand margin.  The solution found was to create a specific id for the line item called "no-right-margin".  The CSS code then had a margin-right of 0px for this id.
+| Device                    | Responsive >= 700px | Responsive < 699px | Notes:         |
+| :------------             |   :---:             |   :---:            |  :---:         |
+| iPhone SE                 |     n/a             |     Yes            | Virtual device |
+| iPhone XR                 |     n/a             |     Yes            | Virtual device |
+| iPhone 12 Pro             |     n/a             |     Yes            | Virtual device |
+| iPhone 13                 |     n/a             |     Yes            | Physical device|
 
 Towards the end of the project the pages were tested on the following devices and browsers:
 
