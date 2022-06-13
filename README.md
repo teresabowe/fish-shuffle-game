@@ -10,90 +10,50 @@ The Sea Animal Shuffle game intends to help users develop their logical thinking
 
 - __Header__
 
-    - The header shows the name of the game at the top of the page.  This name: Sea Animal Shuffle communicates to the the main purpose of the game to the user.
+    - The header shows the name of the game at the top of the page.  This name: Sea Animal Shuffle communicates the main purpose of the game to the user.
 
-    - The font chosen is Fredoka which is a large rounded sytle font.  It is intended to introduce a fun element to the game.
+    - The font chosen is Fredoka which is a large rounded style font.  It is intended to introduce a fun element to the game.
 
-    - The user is then presented with clear instructions on how to play the game i.e. figure out the sequence by clicking on the images.
+    - The user is then presented with clear instructions on how to play the game i.e. figure out the sequence of the images by clicking on the images.
 
-    - Finally the user can click on start to start the game.  The game is already initialised on document load however this option allows the user to start a new game at any time.
-
-    Talk about shuffle.
-
+    - Finally, the user can click on start to start the game.  The game is already initialised on document load however this option allows the user to start a new game at any time.
 
 ![Header](/docs/navigation-bar.png)
 
-- __Landing Page Image__
+- __Image Selection Area__
 
-    - The hero image gives an idea of what the finished shopper bag would look like.  The park setting is intended to give a relaxed casual feel to the user and also to highlight the shopper bag in the foreground.
+    - The onclick events for image selection are preloaded on document load.  The user can click on each image and toggle through the images of fish, octopus, crab and seahorse.
 
-    - The overlay text of "Make this bag yourself!" attempts to draw the user in to start thinking about making a bag.
+    - The submit button click event is also preloaded on document load.  Once the user clicks on the submit button, the selection is compared against the random computer shuffle of the images.  This shuffle is generated using the Fisher Yates algorithm.
 
-    - The call to action of "Get started" offers both the beginner and the experienced crafter a link to the materials section of the page where details can be found about fabrics and tools needed.  The font family here is Montserrat also which is the same as the logo text in the navigation bar.
+    ![Hero Image](/docs/hero-image-index-page.png)
 
-![Hero Image](/docs/hero-image-index-page.png)
+ - __Game Results__
 
- - __Bag Gallery Section__
+    - The user image choice is first checked to make sure there is one of each image selected.  If this is not the case the user receives an alert to indicate which sea animal is missing.
 
-    - The bag gallery shows images of the completed bag holding toys, gym training equipment, flowers and groceries.  The intention here is that the images will impress upon the user that it is a multifunctional item so it is worth making the effort to check out the materials needed and the steps involved in the following sections.
+     ![Sea animal missing](/docs/hero-image-index-page.png)    
 
-![Bag Gallery](/docs/bag-gallery.png)
+    - Also, if there are correctly chosen images, the user recevies feedback by having a border added around the sea animal.  If the selection is correct, the area is highlighted in green.  The incorrect selections are highlighted in red.
 
-- __Materials and Equipment Section__
+     ![Incorrect Border](/docs/hero-image-index-page.png)    
 
-    - This section tells the user exactly what quantity of material and which tools are essential to make the bag.
+    - The user choice is also cloned and presented below the user choice.
 
-    - The icons also provide a visual representation to also quickly show the user these items e.g. sewing machine, thread, pins.  Many of these items most likely are owned by the user already.  It is intended that showing these icons provides some immediate imformation thereby putting the beginner crafer at ease.
+     ![clone](/docs/hero-image-index-page.png)    
 
-![Materials and Equipment](/docs/materials-and-equipment.png)
+    - The game continues as the user selects new image sequences and clicks on the submit button. 
 
-- __Steps Section__
+    - Once the user has selected the correct sequence, the alert will then congratulate the user and all of the images will be highlighted in greeen.
 
-    - The steps section provides the user detailed instructions on how to construct the bag including information on how to prepare the materials.
+     ![Correct Sequence Border](/docs/hero-image-index-page.png)    
 
-    - The images show key points in each step such as creating the french seam or sewing the top of the bag.
+    - At this point, the image onclick and submit button click have been disabled temporarily.  The user can click the start button to reload the page to begin a new game.
 
-    - The user also has the option of clicking through to the glossary page to check out definitions regarding relevant sewing terminology.  This feature is aimed at the beginner crafter.  The experienced crafter can continue on past the links to see quickly how the bag is constructed.
+    - The game is terminated if the user does not guess the correct sequence within 26 trys.
 
-    - The links are a different colour to the other text which is intended to encourage a ckick through to the glossary.
+     ![26 trys](/docs/hero-image-index-page.png)  
 
-    ![Step1](/docs/step1.png)
-    ![Step1](/docs/step2.png)
-    ![Step1](/docs/step3.png)
-    ![Step1](/docs/step4.png)
-    ![Step1](/docs/step5.png)
-
-- __The Footer__
-
-    - The footer call to action encourages the user interact with the social media channels.  In this case the most relevant channels are Facebook, Instagram and Pinterest.  
-    
-    - A new tab will be opened to allow the user to to navigate to the desired channel seamlessly.
-
-     ![Footer](/docs/footer.png)
-
-- __Glossary__
-
-    - The glossary is available on the navigation bar on the main index page and also can be found via links from the steps section on the main index page.
-
-    - The layout and design is potentially a familiar one and similar to any glossary found on Wikipedia with the terminology laid out in alphabetical order.  The letters are in capitals and separated by a line break before the glossary term and an indented description.
-
-    - Each term is referenced by a number which is linked to the reference section at the bottom of the page.
-
-    - The reference section offers the user, depending on their interest, an opportunity to explpore the references further.
-
-    ![Step1](/docs/glossary-F-to-I.png)
-    ![Step1](/docs/glossary-O-to-R.png)
-    ![Step1](/docs/glossary-W-to-references.png)
-
-
-- __Contact__
-
-    - The contact page provides an opportunity for the user to send a message.  The user must enter their name, email address and the message.  All fields are required to be completed.  The name field must contain text.  The email address must be entered in the correct format i.e. must contain the @ and . characters.
-
-    - Once the send button is clicked the user is presented with a thank you page which is triggered by a GET method in the form element.  This page is not visible from the navigation menu but contains the navigation bar to allow for further browsing by the user.
-
-    ![Contact Page](/docs/contact-page.png)
-    ![Thank YOu Page](/docs/thankyou-page.png)
 
 ### Features Left to Implement
 
