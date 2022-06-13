@@ -72,8 +72,7 @@ function  arrayShuffle(arrayToShuffle) { //pass an array into this function.
 
 
 function toggleImages() {
-    console.log("in runGame this.src [" + this.src + "]")
-       
+           
     if(this.src.includes(`${baseImageURL}fish.png`)) {
         this.src = `${baseImageURL}octopus.png`;
     } else if(this.src.includes(`${baseImageURL}octopus.png`)) {

@@ -87,24 +87,22 @@ Further manual testing for responsiveness was completed using Developer Tools on
 | Desktop > 1024            |     Yes             |     n/a            | Physical device|
 
 ### Browser Compatibility 
-Further manual testing for responsiveness was completed using Developer Tools on Google Chrome and pyhsical devices.  The results are shown below.
+Browser testing was completed on the three primary desktop browsers.  The results are shown below.
 
-| Device                    | Responsive >= 700px | Responsive < 699px | Notes:         |
-| :------------             |   :---:             |   :---:            |  :---:         |
-| iPhone SE                 |     n/a             |     Yes            | Virtual device |
-| iPhone XR                 |     n/a             |     Yes            | Virtual device |
-| iPhone 12 Pro             |     n/a             |     Yes            | Virtual device |
-| iPhone 13                 |     n/a             |     Yes            | Physical device|
+| Device                                | Intended Appearance | Intended Responsiveness | Notes:         |
+| :------------                         |   :---:             |   :---:                 |  :---:         |
+| Google Chrome Version 102.0.5005.63   |     Yes             |     Yes                 | Virtual device |
+| Microsoft Edge Version 102.0.1245.39  |     Yes             |     Yes                 | Virtual device |
+| Firefox Version 101.0.1               |     Yes             |     Yes                 | Virtual device |
 
-Towards the end of the project the pages were tested on the following devices and browsers:
+### Bugs 
+During developenent and testing, it became aparrent that the toggleImage function was not performaing as it should.  The problem arose when the counter number was equal to the counter number on the if/if else statement while at the same time the image previously selected was the same as that shown on the if/if else statement.  The inpact for the user was that they would need to click twice to move the image along.  While it would be intuitive for the user to click twice if the image did not change, it was decided to attempt to fix this issue.  The best solution was to replace the counter and the if statement section of the toggleImage function with a simpler method of changing the image.  The changes are shown below.
 
-- Windows 11 Home on HP Pavilion Laptop with 1920p x 1080p display
-    - Google Chrome Version 101.0.4951.54
-    - Microsoft Edge Version 101.0.1210.32 
-    - Firefox Version 100
 
-- iOS 15.4.1 on iPhone with 2340p x 1080p display
-    - iOS Safari
+
+
+
+
 
 ### Validator Testing
 
