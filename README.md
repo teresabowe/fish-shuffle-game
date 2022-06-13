@@ -96,7 +96,7 @@ Browser testing was completed on the three primary desktop browsers.  The result
 | Firefox Version 101.0.1               |     Yes             |     Yes                 | Virtual device |
 
 ### Bugs 
-During developenent and testing, it became aparrent that the toggleImage function was not performaing as it should.  The problem arose when the counter number was equal to the counter number on the if/if else statement while at the same time the image previously selected was the same as that shown on the if/if else statement.  The inpact for the user was that they would need to click twice to move the image along.  While it would be intuitive for the user to click twice if the image did not change, it was decided to attempt to fix this issue.  The best solution was to replace the counter and the if statement section of the toggleImage function with a simpler method of changing the image.  The changes are shown below.
+During developenent and testing, it became aparrent that the toggleImage function was not performing as it should.  The problem arose when the counter number was equal to the counter number on the if/if else statement while at the same time the image previously selected was the same as that shown on the if/if else statement.  The inpact for the user was that they would need to click twice to move the image along.  While it would be intuitive for the user to click twice if the image did not change, it was decided to attempt to fix this issue.  The best solution was to replace the counter and the if statement section of the toggleImage function with a simpler method of changing the image.  The changes are shown below.
 
 Before code.
 After code.
@@ -112,32 +112,30 @@ After code.
 - __HTML__
     - When the code is passed through the official W3C Validator, there are currently no errors or warnings showing.
 
-    - In the early development stage the validator would show errors where div elements were not closed correctly.
-
-    - When fixing some issues with performance and image size, the validator showed that there was a missing parameter on an img element using the srcset attribute.
-
 - __CSS__   
-    - When the code is passed through the official CSS W3C Jigsaw Validator, there are currently no errors or warnings showing.
+    - When the code is passed through the official CSS W3C Jigsaw Validator, there are currently no errors showing.  There is one warning stating that "Imported style sheets are not checked in direct input and file upload modes".  I understand that this is related to the use of Google Fonts font family.
 
-- __CSS__  
+- __Javascript__  
+    - When the code is passed through the official JSHint validator, there are currently no errors or warnings showing.
+
+
 
 - __Lighthouse__   
-    - The Chrome Lighthouse tool was used to check performance, accessibility, best proctice and SEO.  Initially the performance was in the amber region for both desktop and mobile.  The largest image files were compressed, however there was still an amber result for both devices.  The Chrome Lighthouse tool suggested that the files be converted to .webp format.  This was subsequently done but there was still performance issues for mobile.  Further suggestions were to serve responsive images by creating media queries and using reduced size images for mobile devices.  The ImageMagick CLI was used to reduce the size of the file and the srcset attribute was applied to the img element to serve the smaller image to the media query for max-width: 480px.
-
-    - The results for accessibility, best proctice and SEO were consistently high when tested with the Chrome Lighthouse tool.
+    - The Chrome Lighthouse tool was used to check performance, accessibility, best proctice, and SEO. 
 
     - The current results are shown below:
 
+    Desktop
+
         ![Lighthouse Desktop](/docs/lighthouse-desktop.png)
+
+    Mobile
+
         ![Lighthouse Mobile](/docs/lighthouse-mobile.png)
 
 ### Unfixed Bugs
 
-An issue that is outstanding at the time of writing this readme is related to the materials section which uses Flexbox to wrap the line items.  The issue appears to show a wider margin on the right side of the listed materials.  The Chrome [Unicorn Revealer](https://chrome.google.com/webstore/detail/unicorn-revealer/lmlkphhdlngaicolpmaakfmhplagoaln?hl=en-GB) shows however that there is an overflow on the right margin on the list of items on the left side.  The problem dissapears when the screen is reduced in size and the lines of materials start to wrap.  It is thought that the issue relates to the id "materials-list" and ul element where there is a flex-basis property setting along with left and right margins.  Further investigation is needed to resolve this issue.
-
-![Materials Alignment Issue](/docs/materials-flexbox-issue.png)
-
-Firefox Version 100 has a slightly grainy appearance for Open Sans in the header section.  At the time of writing this readme this has not been resolved.
+At the time of writing this readme file there was no known bugs.
 
 ## Deployment
 
