@@ -101,13 +101,7 @@ During developenent and testing, it became aparrent that the toggleImage functio
 Before code.
 After code.
 
-
-
-
-
-
-
-### Validator Testing
+c
 
 - __HTML__
     - When the code is passed through the official W3C Validator, there are currently no errors or warnings showing.
@@ -117,8 +111,6 @@ After code.
 
 - __Javascript__  
     - When the code is passed through the official JSHint validator, there are currently no errors or warnings showing.
-
-
 
 - __Lighthouse__   
     - The Chrome Lighthouse tool was used to check performance, accessibility, best proctice, and SEO. 
@@ -132,6 +124,9 @@ After code.
     Mobile
 
         ![Lighthouse Mobile](/docs/lighthouse-mobile.png)
+
+### Features Testing
+
 
 ### Unfixed Bugs
 
