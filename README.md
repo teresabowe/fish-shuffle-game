@@ -22,9 +22,9 @@ The Sea Animal Shuffle game intends to help users develop their logical thinking
 
 - __Image Selection Area__
 
-    - The onclick events for image selection are preloaded on document load.  The user can click on each image and toggle through the images of fish, octopus, crab and seahorse.
+    - The onclick events for image selection are preloaded on document load.  The user can click on each image and toggle through the images of fish, octopus, crab, and seahorse.
 
-    - The submit button click event is also preloaded on document load.  Once the user clicks on the submit button, the selection is compared against the random computer shuffle of the images.  This shuffle is generated using the Fisher Yates algorithm.
+    - The submit button click event is also preloaded on document load.  Once the user clicks on the submit button, the selection is compared against the random computer shuffle of the images.  This shuffle is generated using the Fisher-Yates algorithm.
 
     ![Hero Image](/docs/hero-image-index-page.png)
 
@@ -34,7 +34,7 @@ The Sea Animal Shuffle game intends to help users develop their logical thinking
 
      ![Sea animal missing](/docs/hero-image-index-page.png)    
 
-    - Also, if there are correctly chosen images, the user recevies feedback by having a border added around the sea animal.  If the selection is correct, the area is highlighted in green.  The incorrect selections are highlighted in red.
+    - Also, if there are correctly chosen images, the user receives feedback by having a border added around the sea animal.  If the selection is correct, the area is highlighted in green.  The incorrect selections are highlighted in red.
 
      ![Incorrect Border](/docs/hero-image-index-page.png)    
 
@@ -44,7 +44,7 @@ The Sea Animal Shuffle game intends to help users develop their logical thinking
 
     - The game continues as the user selects new image sequences and clicks on the submit button. 
 
-    - Once the user has selected the correct sequence, the alert will then congratulate the user and all of the images will be highlighted in greeen.
+    - Once the user has selected the correct sequence, the alert will then congratulate the user and all of the images will be highlighted in green.
 
      ![Correct Sequence Border](/docs/hero-image-index-page.png)    
 
@@ -57,13 +57,32 @@ The Sea Animal Shuffle game intends to help users develop their logical thinking
 
 ### Features Left to Implement
 
-- The creation and hosting of an instructional video was deemed to be not feasible for this release.
-
-- I believe that a good deal of the site structure and content may be reusable in the future.  For examplethe layout and the styling of the glossary page may be reusable.  This opportunity perhaps was not fully thought out in terms of what the exact requirements were.  
+- I would like to add a additional level where the number of images presented to the user is five.  
 
 ## Testing
 
-Initially all device testing was simulated on the Developer Tools on Google Chrome Version 101.0.4951.54.  As each feature of the product was being developed, it was tested on Google Chrome to check that it was functioning correctly and also that the responsiveness was as expected.  Any issues in the code were resolved as the project was being developed.
+Initially all device testing was simulated on the Developer Tools on Google Chrome Version 101.0.4951.54.  As each feature of the product was being developed, it was tested on Google Chrome to check that it was functioning correctly and also that the responsiveness was as expected.
+
+### Responsiveness 
+
+
+| Device                    | Responsive >= 700px |    Responsive < 699px     | 
+| :------------             |   :---:             |   :---:                     |
+| iPhone SE                 |     Yes               |     5                       |
+| iPhone XR                 |     Yes               |     5                       |
+| iPhone 12 Pro             |     5               |     5                       |
+| Pixel 5                   |     5           |     5                       |
+| Samsung Galaxy S8+        |     5           |     5                       |
+| Samsung Galaxy S20 Ultra  |     4           |     5                       |
+| iPad Air                  |     4           |     5                       |
+| iPad Mini                 |     5           |     5                       |
+| Surface Pro 7             |     4           |     5                       |
+| Surface Duo               |     4           |     5                       |
+| Galaxy Fold               |     4           |     5                       |
+| Sansung Galaxy A51/71     |     4           |     5                       |
+| Nest Hub                  |     4           |     5                       |
+| Nest Hub Max              |     4           |     5                       |
+
 
 While the pages are developed for responsiveness using CSS Grid, some of the sections use Flexgrid. One of these is the header section.  An issue that was highlighted during the testing and proved challenging was the centering of both the Logo text and the navigation items once the header was wrapped for responsiveness.  The Chrome [Unicorn Revealer](https://chrome.google.com/webstore/detail/unicorn-revealer/lmlkphhdlngaicolpmaakfmhplagoaln?hl=en-GB) showed that the problem existed on the navigation items where the contact link had a right hand margin.  The solution found was to create a specific id for the line item called "no-right-margin".  The CSS code then had a margin-right of 0px for this id.
 
