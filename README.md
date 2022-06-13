@@ -119,6 +119,8 @@ After code.
 - __CSS__   
     - When the code is passed through the official CSS W3C Jigsaw Validator, there are currently no errors or warnings showing.
 
+- __CSS__  
+
 - __Lighthouse__   
     - The Chrome Lighthouse tool was used to check performance, accessibility, best proctice and SEO.  Initially the performance was in the amber region for both desktop and mobile.  The largest image files were compressed, however there was still an amber result for both devices.  The Chrome Lighthouse tool suggested that the files be converted to .webp format.  This was subsequently done but there was still performance issues for mobile.  Further suggestions were to serve responsive images by creating media queries and using reduced size images for mobile devices.  The ImageMagick CLI was used to reduce the size of the file and the srcset attribute was applied to the img element to serve the smaller image to the media query for max-width: 480px.
 
