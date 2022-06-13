@@ -1,6 +1,6 @@
 # Sea Animal Shuffle
 
-The Sea Animal Shuffle game intends to help users develop their logical thinking skills.  The site is targeted at children from 5+ years of age up to adults.  The user is presented with four sea animal images.  The user needs to find the correct sequence of the images.  The sequence has already been decided by a random computer shuffle of the images.
+The Sea Animal Shuffle game site intends to help users develop their logical thinking skills. It is targeted at children from 5+ years of age up to adults. The user must find the correct sequence for the four images presented. The correct sequence has already been chosen by a random computer shuffle.
 
 ![Responsive Mockup](/docs/am-i-responsive.png)
 
